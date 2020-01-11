@@ -9,6 +9,11 @@ const merge = require('webpack-merge')
 
 module.exports = {
   siteName: 'Gridsome',
+  siteUrl: 'https://www.gridsome.org',
+  siteDescription: 'Una descripción del sitio',
+  metadata: {
+    themeColor: '#00594f'
+  },
   plugins: [],
   configureWebpack (config) {
     return merge({
