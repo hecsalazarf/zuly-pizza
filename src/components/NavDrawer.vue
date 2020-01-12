@@ -2,26 +2,28 @@
   <v-navigation-drawer
     :value="value"
     app
+    right
+    color="primary"
+    temporary
+    touchless
     @input="$emit('input', $event)"
   >
-    <v-list dense>
-      <v-list-item link>
-        <v-list-item-action>
-          <v-icon>mdi-home</v-icon>
-        </v-list-item-action>
-        <v-list-item-content>
-          <v-list-item-title>Home</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list-item link>
-        <v-list-item-action>
-          <v-icon>mdi-contact-mail</v-icon>
-        </v-list-item-action>
-        <v-list-item-content>
-          <v-list-item-title>Contact</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-    </v-list>
+    <v-container fluid>
+      <v-row class="text-center secondary--text display-2" style="font-family: Galada !important">
+        <v-col cols="12">
+          <div>Menu</div>
+        </v-col>
+        <v-col cols="12">
+          <div>Servicios</div>
+        </v-col>
+        <v-col cols="12">
+          <div>Historia</div>
+        </v-col>
+        <v-col cols="12">
+          <div>Ubicación</div>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-navigation-drawer>
 </template>
 

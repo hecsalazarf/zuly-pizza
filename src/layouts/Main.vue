@@ -1,7 +1,7 @@
 <template>
   <div class="layout-wrapper">
     <nav-drawer v-model="drawer" />
-    <app-bar @drawer="drawer = !drawer" />
+    <app-bar @input="drawer = !drawer" />
     <v-content>
       <!-- <v-container fluid> -->
       <!-- If using vue-router -->
@@ -37,3 +37,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .layout-wrapper {
+    background-color: #f6eec9
+  }
+</style>
