@@ -1,40 +1,58 @@
 <template>
-  <v-container fluid>
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image
-      alt="Example image"
-      src="~/favicon.png"
-      width="135"
-    />
-
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a
-        href="https://gridsome.org/docs/"
-        target="_blank"
-        rel="noopener"
-      >Gridsome Docs</a>
-      <a
-        href="https://github.com/gridsome/gridsome"
-        target="_blank"
-        rel="noopener"
-      >GitHub</a>
-    </p>
-  </v-container>
+  <div>
+    <section>
+      <main-hero />
+    </section>
+    <section>
+      <promotions />
+    </section>
+  </div>
 </template>
 
+<static-query>
+  query {
+    metadata {
+      siteName
+      siteUrl
+      siteDescription
+    }
+  }
+</static-query>
+
 <script>
+import { MainHero, Promotions } from '~/components'
 export default {
-  metaInfo: {
-    title: 'Hello, world!'
+  metaInfo () {
+    const title = 'Inicio'
+    const { siteDescription, siteName, siteUrl } = this.$static.metadata
+    return {
+      title,
+      meta: [
+        { name: 'description', content: siteDescription },
+        { property: 'og:description', content: siteDescription },
+        { property: 'og:title', content: `${title} - ${siteName}` },
+        { property: 'og:url', content: siteUrl }
+      ],
+      link: [
+        { rel: 'canonical', href: siteUrl },
+        { rel: 'alternate', hreflang: 'es-MX', href: siteUrl },
+        { rel: 'alternate', hreflang: 'es', href: siteUrl },
+        { rel: 'alternate', hreflang: 'x-default', href: siteUrl }
+      ]
+    }
+  },
+  name: 'IndexPage',
+  components: {
+    MainHero,
+    Promotions
+  },
+  data () {
+    return {
+    }
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+
 </style>
