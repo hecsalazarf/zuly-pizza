@@ -22,5 +22,12 @@ module.exports = {
       ]
     }, config)
   },
+  css: {
+    loaderOptions: {
+      sass: {
+        data: "@import 'src/scss/vuetify_vars.scss'" // Override vuetify sass variables
+      }
+    }
+  },
   port: 8082
 }
