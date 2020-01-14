@@ -1,26 +1,39 @@
 <template>
-  <div class="layout-wrapper">
+  <div
+    v-scroll="onScroll"
+    class="layout-wrapper"
+  >
     <nav-drawer v-model="drawer" />
     <app-bar @input="drawer = !drawer" />
-    <v-content>
-      <!-- <v-container fluid> -->
-      <!-- If using vue-router -->
+    <v-content class="pt-0">
       <slot />
-      <!-- </v-container> -->
     </v-content>
+    <v-scale-transition>
+      <v-btn
+        v-if="windowYOffset > 90"
+        fixed
+        dark
+        fab
+        bottom
+        right
+        color="primary"
+        tag="a"
+        :href="`tel:${5527666299}`"
+      >
+        <v-icon
+          color="secondary"
+          class="font-italic"
+        >
+          fas fa-phone-volume
+        </v-icon>
+      </v-btn>
+    </v-scale-transition>
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <script>
 import { AppBar, NavDrawer } from '~/components'
+import { debounce } from '~/utils'
 
 export default {
   name: 'MainLayout',
@@ -30,10 +43,14 @@ export default {
   },
   data () {
     return {
-      drawer: false
+      drawer: false,
+      windowYOffset: 0
     }
   },
-  mounted () {
+  methods: {
+    onScroll: debounce(function (e) {
+      this.windowYOffset = window.pageYOffset
+    }, 100)
   }
 }
 </script>
