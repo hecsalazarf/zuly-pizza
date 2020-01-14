@@ -1,13 +1,16 @@
 <template>
-  <div>
+  <div class="relative">
     <section>
       <main-hero />
     </section>
-    <section>
+    <section class="fifth">
       <promotions />
     </section>
     <section>
       <services />
+    </section>
+    <section class="third">
+      <about-us />
     </section>
   </div>
 </template>
@@ -23,7 +26,7 @@
 </static-query>
 
 <script>
-import { MainHero, Promotions, Services } from '~/components'
+import { MainHero, Promotions, Services, AboutUs } from '~/components'
 export default {
   metaInfo () {
     const title = 'Inicio'
@@ -48,7 +51,8 @@ export default {
   components: {
     MainHero,
     Promotions,
-    Services
+    Services,
+    AboutUs
   },
   data () {
     return {
