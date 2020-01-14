@@ -1,3 +1,5 @@
+@use 'variables' as vars;
+
 // Position
 .relative {
   position: relative;
@@ -47,4 +49,9 @@
 
 .min-w-full	{
   min-width: 100%;
+}
+
+// Fonts
+.text-title {
+  font-family: vars.$title-font-family;
 }

@@ -1,4 +1,11 @@
+@use 'variables' as vars;
+
 @font-face {
-  font-family: 'Galada';
-  src: url(../fonts/Galada-Regular.ttf);
+  font-family: vars.$body-font-family;
+  src: url(../fonts/Economica-Regular.ttf);
+}
+
+@font-face {
+  font-family: vars.$title-font-family;
+  src: url(../fonts/BungeeInline-Regular.ttf);
 }
