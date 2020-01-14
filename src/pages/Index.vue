@@ -6,6 +6,9 @@
     <section>
       <promotions />
     </section>
+    <section>
+      <services />
+    </section>
   </div>
 </template>
 
@@ -20,7 +23,7 @@
 </static-query>
 
 <script>
-import { MainHero, Promotions } from '~/components'
+import { MainHero, Promotions, Services } from '~/components'
 export default {
   metaInfo () {
     const title = 'Inicio'
@@ -44,7 +47,8 @@ export default {
   name: 'IndexPage',
   components: {
     MainHero,
-    Promotions
+    Promotions,
+    Services
   },
   data () {
     return {
@@ -52,7 +56,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>
