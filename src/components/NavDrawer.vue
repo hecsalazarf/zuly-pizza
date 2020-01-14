@@ -2,25 +2,33 @@
   <v-navigation-drawer
     :value="value"
     app
-    right
+    left
     color="primary"
     temporary
     touchless
     @input="$emit('input', $event)"
   >
     <v-container fluid>
-      <v-row class="text-center secondary--text display-2" style="font-family: Galada !important">
+      <v-row class="text-center secondary--text display-1">
         <v-col cols="12">
-          <div>Menu</div>
+          <div class="text-accent">
+            Menu
+          </div>
         </v-col>
         <v-col cols="12">
-          <div>Servicios</div>
+          <div class="text-accent">
+            Servicios
+          </div>
         </v-col>
         <v-col cols="12">
-          <div>Historia</div>
+          <div class="text-accent">
+            Historia
+          </div>
         </v-col>
         <v-col cols="12">
-          <div>Ubicación</div>
+          <div class="text-accent">
+            Ubicación
+          </div>
         </v-col>
       </v-row>
     </v-container>

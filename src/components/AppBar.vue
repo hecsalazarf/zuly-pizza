@@ -1,50 +1,28 @@
 <template>
-  <v-btn
-    v-scroll="scroll"
-    class="nav-toggle"
+  <v-app-bar
+    app
+    collapse
+    elevate-on-scroll
     color="primary"
-    top
-    right
-    fixed
-    :elevation="elevation"
-    @click="$emit('input', true)"
+    hide-on-scroll
+    width="60px"
   >
-    <v-icon color="secondary">
-      fas fa-bars
-    </v-icon>
-  </v-btn>
+    <v-app-bar-nav-icon @click="$emit('input', true)">
+      <v-icon
+        color="secondary"
+      >
+        fas fa-bars
+      </v-icon>
+    </v-app-bar-nav-icon>
+  </v-app-bar>
 </template>
 
 <script>
-import { debounce } from '~/utils'
-
 export default {
   name: 'AppBar',
   data () {
     return {
-      windowOffset: 0
     }
-  },
-  computed: {
-    elevation () {
-      if (this.windowOffset > 50) {
-        return 5
-      }
-      return 0
-    }
-  },
-  methods: {
-    scroll: debounce(function (e) {
-      if (window) {
-        this.windowOffset = window.pageYOffset
-      }
-    }, 50)
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  button.nav-toggle {
-    z-index: 1;
-  }
-</style>
