@@ -52,6 +52,15 @@
 }
 
 // Fonts
-.text-title {
+.text-accent {
   font-family: vars.$title-font-family;
+}
+
+// Borders
+.border-none {
+  border-style: none;
+}
+
+.rounded {
+  border-radius: .5rem;
 }

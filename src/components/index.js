@@ -4,6 +4,7 @@ import MainHero from './MainHero'
 import Promotions from './Promotions'
 import Services from './Services'
 import AboutUs from './AboutUs'
+import FindUs from './FindUs'
 
 export {
   AppBar,
@@ -11,5 +12,6 @@ export {
   MainHero,
   Promotions,
   Services,
-  AboutUs
+  AboutUs,
+  FindUs
 }

@@ -12,6 +12,9 @@
     <section class="third">
       <about-us />
     </section>
+    <section>
+      <find-us />
+    </section>
   </div>
 </template>
 
@@ -26,7 +29,7 @@
 </static-query>
 
 <script>
-import { MainHero, Promotions, Services, AboutUs } from '~/components'
+import { MainHero, Promotions, Services, AboutUs, FindUs } from '~/components'
 export default {
   metaInfo () {
     const title = 'Inicio'
@@ -52,7 +55,8 @@ export default {
     MainHero,
     Promotions,
     Services,
-    AboutUs
+    AboutUs,
+    FindUs
   },
   data () {
     return {
