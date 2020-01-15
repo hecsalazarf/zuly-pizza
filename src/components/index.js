@@ -5,6 +5,7 @@ import Promotions from './Promotions'
 import Services from './Services'
 import AboutUs from './AboutUs'
 import FindUs from './FindUs'
+import Footer from './Footer'
 
 export {
   AppBar,
@@ -13,5 +14,6 @@ export {
   Promotions,
   Services,
   AboutUs,
-  FindUs
+  FindUs,
+  Footer
 }
