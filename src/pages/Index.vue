@@ -4,16 +4,16 @@
       <main-hero />
     </section>
     <section class="fifth">
-      <promotions />
+      <promotions ref="promotions" />
     </section>
     <section>
-      <services />
+      <services ref="services" />
     </section>
     <section class="third">
-      <about-us />
+      <about-us ref="aboutUs" />
     </section>
     <section>
-      <find-us />
+      <find-us ref="findUs" />
     </section>
   </div>
 </template>
@@ -30,6 +30,8 @@
 
 <script>
 import { MainHero, Promotions, Services, AboutUs, FindUs } from '~/components'
+import { PageMixin } from '~/mixins'
+
 export default {
   metaInfo () {
     const title = 'Inicio'
@@ -58,9 +60,6 @@ export default {
     AboutUs,
     FindUs
   },
-  data () {
-    return {
-    }
-  }
+  mixins: [PageMixin]
 }
 </script>

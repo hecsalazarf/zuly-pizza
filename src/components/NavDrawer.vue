@@ -8,29 +8,76 @@
     touchless
     @input="$emit('input', $event)"
   >
-    <v-container fluid>
+    <v-container
+      fluid
+      class="h-full"
+    >
       <v-row class="text-center secondary--text display-1">
-        <v-col cols="12">
-          <div class="text-accent">
+        <v-col
+          v-if="$route.path !== '/'"
+          cols="12"
+        >
+          <g-link
+            class="text-accent secondary--text"
+            to="/"
+          >
+            Inicio
+          </g-link>
+        </v-col>
+        <v-col
+          v-if="$route.path !== '/menu/'"
+          cols="12"
+        >
+          <g-link
+            class="text-accent secondary--text"
+            to="/menu/"
+          >
             Menu
-          </div>
+          </g-link>
         </v-col>
         <v-col cols="12">
-          <div class="text-accent">
+          <a
+            class="text-accent secondary--text"
+            @click="navigateTo({ path: '/', ref: 'promotions' })"
+          >
+            Promos
+          </a>
+        </v-col>
+        <v-col cols="12">
+          <a
+            class="text-accent secondary--text"
+            @click="navigateTo({ path: '/', ref: 'services' })"
+          >
             Servicios
-          </div>
+          </a>
         </v-col>
         <v-col cols="12">
-          <div class="text-accent">
+          <a
+            class="text-accent secondary--text"
+            @click="navigateTo({ path: '/', ref: 'aboutUs' })"
+          >
             Historia
-          </div>
+          </a>
         </v-col>
         <v-col cols="12">
-          <div class="text-accent">
+          <a
+            class="text-accent secondary--text"
+            @click="navigateTo({ path: '/', ref: 'findUs' })"
+          >
             Ubicación
-          </div>
+          </a>
         </v-col>
       </v-row>
+      <div class="absolute social-networks">
+        <a href="">
+          <v-icon
+            size="2rem"
+            color="fifth"
+          >
+            fab fa-facebook-square
+          </v-icon>
+        </a>
+      </div>
     </v-container>
   </v-navigation-drawer>
 </template>
@@ -42,6 +89,27 @@ export default {
     value: {
       type: Boolean
     }
+  },
+  methods: {
+    navigateTo (route) {
+      this.$emit('input', false)
+      this.goTo(route)
+    },
+    goTo ({ path, ref }) {
+      if (this.$route.path !== path) {
+        this.$router.push({ path })
+        setTimeout(() => this.$root.$emit('goTo', ref), 400)
+      } else {
+        this.$root.$emit('goTo', ref)
+      }
+    }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.social-networks {
+  right: 10%;
+  bottom: 5%;
+}
+</style>
