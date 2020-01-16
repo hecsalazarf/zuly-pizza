@@ -3,7 +3,7 @@
     height="400"
     hide-delimiter-background
     :show-arrows="false"
-    class="fifth"
+    cycle
   >
     <v-carousel-item
       v-for="(slide, i) in slides"
