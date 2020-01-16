@@ -1,7 +1,7 @@
 export default [
   {
     name: 'theme-color',
-    content: '#f2eee5'
+    content: '#D08800'
   },
   {
     name: 'og:type',
