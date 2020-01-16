@@ -1,8 +1,10 @@
 <template>
   <v-container class="fill-height">
-    <v-row class="text-center">
+    <v-row class="text-center display-1">
       <v-col cols="12">
-        <p> Tenemos los mejores servicios para ti </p>
+        <p class="text-accent secondary--text">
+          Tenemos los mejores servicios para ti
+        </p>
       </v-col>
       <v-col cols="12">
         <v-row>
