@@ -1,5 +1,5 @@
-import headerAttrs from './headerAttrs'
+import metaAttrs from './metaAttrs'
 
 export {
-  headerAttrs
+  metaAttrs
 }
