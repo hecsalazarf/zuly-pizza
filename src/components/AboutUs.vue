@@ -7,7 +7,7 @@
       >
         <g-image
           src="~/assets/img/about_us.jpg"
-          class="w-full h-auto"
+          class="w-full h-auto rounded"
         />
       </v-col>
       <v-col
