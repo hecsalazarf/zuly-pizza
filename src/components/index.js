@@ -6,6 +6,8 @@ import Services from './Services'
 import AboutUs from './AboutUs'
 import FindUs from './FindUs'
 import Footer from './Footer'
+import MenuHero from './MenuHero'
+import Pizza from './Pizza'
 
 export {
   AppBar,
@@ -15,5 +17,7 @@ export {
   Services,
   AboutUs,
   FindUs,
-  Footer
+  Footer,
+  MenuHero,
+  Pizza
 }
