@@ -27,7 +27,7 @@
         <font-awesome-icon
           :icon="['fas', 'angle-double-down']"
           size="2x"
-          class="primary--text text--lighten-1"
+          class="primary--text text--lighten-1 animated infinite fadeInDown slower"
         />
       </div>
     </v-container>

@@ -19,6 +19,7 @@
         color="primary"
         tag="a"
         :href="`tel:${5527666299}`"
+        class="animated infinite pulse slow"
       >
         <font-awesome-icon
           class="secondary--text headline"
