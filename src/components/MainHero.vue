@@ -1,6 +1,6 @@
 <template>
   <div class="video-container relative h-screen">
-    <video
+    <!-- <video
       loop
       autoplay
       muted
@@ -11,11 +11,11 @@
         src="/video/max_champs_silo.mp4"
         type="video/mp4"
       >
-    </video>
+    </video> -->
     <v-container
-      class="fill-height relative"
+      class="fill-height relative pa-0"
     >
-      <v-row>
+      <v-row no-gutters>
         <v-col cols="12 text-center">
           <h1 class="primary--text">
             LOGO
@@ -23,12 +23,13 @@
         </v-col>
         <v-spacer />
       </v-row>
-      <v-icon
-        class="scroll-icon absolute"
-        color="primary"
-      >
-        fas fa-angle-double-down
-      </v-icon>
+      <div class="d-flex scroll-icon absolute justify-center w-full">
+        <font-awesome-icon
+          :icon="['fas', 'angle-double-down']"
+          size="2x"
+          class="primary--text text--lighten-1"
+        />
+      </div>
     </v-container>
   </div>
 </template>
@@ -47,8 +48,7 @@
     transform: translateX(-50%) translateY(-50%);
   }
 
-  .v-icon.scroll-icon {
-    bottom: 5%;
-    left: 50%;
+  .scroll-icon {
+    bottom: 10%;
   }
 </style>

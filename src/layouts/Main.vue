@@ -20,12 +20,10 @@
         tag="a"
         :href="`tel:${5527666299}`"
       >
-        <v-icon
-          color="secondary"
-          class="font-italic"
-        >
-          fas fa-phone-volume
-        </v-icon>
+        <font-awesome-icon
+          class="secondary--text headline"
+          :icon="['fas', 'phone-volume']"
+        />
       </v-btn>
     </v-scale-transition>
     <Footer

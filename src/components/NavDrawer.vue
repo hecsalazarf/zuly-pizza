@@ -70,12 +70,11 @@
       </v-row>
       <div class="absolute social-networks">
         <a href="">
-          <v-icon
-            size="2rem"
-            color="fifth"
-          >
-            fab fa-facebook-square
-          </v-icon>
+          <font-awesome-icon
+            :icon="['fab', 'facebook-square']"
+            class="fifth--text"
+            size="2x"
+          />
         </a>
       </div>
     </v-container>

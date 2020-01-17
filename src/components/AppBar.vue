@@ -8,11 +8,11 @@
     width="60px"
   >
     <v-app-bar-nav-icon @click="$emit('input', true)">
-      <v-icon
-        color="secondary"
-      >
-        fas fa-bars
-      </v-icon>
+      <font-awesome-icon
+        :icon="['fas', 'bars']"
+        size="2x"
+        class="secondary--text"
+      />
     </v-app-bar-nav-icon>
   </v-app-bar>
 </template>

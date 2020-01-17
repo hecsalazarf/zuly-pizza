@@ -2,10 +2,22 @@ import Vuetify from 'vuetify/lib'
 import es from 'vuetify/es5/locale/es'
 
 export default function (Vue) {
+  if (process.env.NODE_ENV === 'development') {
+    // As of version 2.2.3, when vuetify uses SVG fontawesome icons, a warning is shown
+    // This hack suppresses this annoying message.
+    // See more at https://github.com/vuetifyjs/vuetify/issues/9999
+    const ignoredWarning = 'The .native modifier for v-on is only valid on components but it was used on <svg>'
+    Vue.config.warnHandler = function (msg, vm, trace) {
+      if (!msg.includes(ignoredWarning)) {
+        console.error(`[Vue warn]: ${msg}`)
+        console.error(trace)
+      }
+    }
+  }
   Vue.use(Vuetify)
   return new Vuetify({
     icons: {
-      iconfont: 'fa'
+      iconfont: 'faSvg'
     },
     lang: {
       current: 'es',

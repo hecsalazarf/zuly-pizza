@@ -14,12 +14,11 @@
           >
             <v-row>
               <v-col cols="12">
-                <v-icon
-                  color="fourth"
-                  size="5rem"
-                >
-                  fas fa-pepper-hot
-                </v-icon>
+                <font-awesome-icon
+                  :icon="['fas', 'pepper-hot']"
+                  size="2x"
+                  class="third--text"
+                />
               </v-col>
               <v-col cols="12">
                 <p> Vendemos productos frescos con ingredientes de la regióm</p>
@@ -32,12 +31,11 @@
           >
             <v-row>
               <v-col cols="12">
-                <v-icon
-                  color="#FF6F00"
-                  size="5rem"
-                >
-                  fas fa-pizza-slice
-                </v-icon>
+                <font-awesome-icon
+                  :icon="['fas', 'pizza-slice']"
+                  size="2x"
+                  class="third--text"
+                />
               </v-col>
               <v-col cols="12">
                 <p>No tienes porque comprar toda una pizza, también vendemos rebanadas individuales</p>
@@ -50,12 +48,11 @@
           >
             <v-row>
               <v-col cols="12">
-                <v-icon
-                  color="third"
-                  size="5rem"
-                >
-                  fas fa-motorcycle
-                </v-icon>
+                <font-awesome-icon
+                  :icon="['fas', 'motorcycle']"
+                  size="2x"
+                  class="third--text"
+                />
               </v-col>
               <v-col cols="12">
                 <p>Entregamos a domicilio a las comunidades cercanas</p>

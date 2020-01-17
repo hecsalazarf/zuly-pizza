@@ -14,9 +14,10 @@
         small
         @click="showPricing = !showPricing"
       >
-        <v-icon small>
-          fas fa-dollar-sign
-        </v-icon>
+        <font-awesome-icon
+          :icon="['fas', 'dollar-sign']"
+          size="lg"
+        />
       </v-btn>
       <g-image
         class="w-full h-full rounded"
