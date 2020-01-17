@@ -11,7 +11,8 @@ import {
   faPhoneAlt,
   faMapMarkedAlt,
   faClock,
-  faDollarSign
+  faDollarSign,
+  faHeartBroken
 } from '@fortawesome/free-solid-svg-icons'
 
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
@@ -29,6 +30,7 @@ export default function (Vue) {
     faMapMarkedAlt,
     faClock,
     faDollarSign,
+    faHeartBroken,
     faFacebookSquare
   )
   Vue.component('font-awesome-icon', FontAwesomeIcon)
