@@ -3,13 +3,31 @@
     <section>
       <main-hero />
     </section>
-    <section class="fifth">
+    <section
+      v-intersect.quiet.once="createIntersectHandler('isPromosVisible')"
+      class="relative primary"
+    >
+      <v-scale-transition origin="center">
+        <div
+          v-show="isPromosVisible"
+          class="fifth w-full h-full absolute"
+        />
+      </v-scale-transition>
       <promotions ref="promotions" />
     </section>
     <section>
       <services ref="services" />
     </section>
-    <section class="third">
+    <section
+      v-intersect.quiet.once="createIntersectHandler('isAboutUSVisible')"
+      class="relative primary"
+    >
+      <v-scale-transition origin="center">
+        <div
+          v-show="isAboutUSVisible"
+          class="third w-full h-full absolute"
+        />
+      </v-scale-transition>
       <about-us ref="aboutUs" />
     </section>
     <section>
@@ -60,6 +78,25 @@ export default {
     AboutUs,
     FindUs
   },
-  mixins: [PageMixin]
+  mixins: [PageMixin],
+  data () {
+    return {
+      isPromosVisible: false,
+      isAboutUSVisible: false
+    }
+  },
+  methods: {
+    createIntersectHandler (toggler) {
+      const handler = function (entry) {
+        this[toggler] = entry[0].isIntersecting
+      }
+      return {
+        handler: handler.bind(this),
+        options: {
+          threshold: 0.5
+        }
+      }
+    }
+  }
 }
 </script>
