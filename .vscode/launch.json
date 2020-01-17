@@ -12,11 +12,11 @@
       "url": "http://localhost:8082/",
       "webRoot": "${workspaceFolder}",
       "userDataDir": "/tmp/gridsome",
-      "breakOnLoad": true,
-      "sourceMaps": true,
-      "sourceMapPathOverrides": {
-        "webpack:///*": "${webRoot}/*"
-      }
+      // "breakOnLoad": true,
+      // "sourceMaps": true,
+      // "sourceMapPathOverrides": {
+      //   "webpack:///*": "${webRoot}/*"
+      // }
     }
   ]
 }
