@@ -6,6 +6,7 @@
 
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 const merge = require('webpack-merge')
+const { GenerateSW } = require('workbox-webpack-plugin')
 
 module.exports = {
   siteName: 'Gridsome',
@@ -18,7 +19,27 @@ module.exports = {
   configureWebpack (config) {
     return merge({
       plugins: [
-        new VuetifyLoaderPlugin()
+        new VuetifyLoaderPlugin(),
+        new GenerateSW({
+          // For an unknown reason, the precache manifest contains an aditional style.js file,
+          // which is not in the final bundle. We exclude this file directly
+          exclude: [/styles\..*\.js$/],
+          skipWaiting: true,
+          cleanupOutdatedCaches: true,
+          cacheId: 'assets',
+          clientsClaim: true,
+          runtimeCaching: [{
+            urlPattern: /\.(?:png|jpg|jpeg|svg|mp4)$/,
+            handler: 'StaleWhileRevalidate',
+            options: {
+              // networkTimeoutSeconds: 5, // Only for NetworkFirst strategy
+              cacheName: 'media',
+              expiration: {
+                maxEntries: '30'
+              }
+            }
+          }]
+        })
       ]
     }, config)
   },
