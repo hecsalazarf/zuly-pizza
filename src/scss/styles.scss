@@ -10,7 +10,7 @@
 }
 
 .absolute {
-  position: absolute;
+  position: absolute !important;
 }
 
 // Height
@@ -63,4 +63,9 @@
 
 .rounded {
   border-radius: .5rem;
+}
+
+// Anchors
+a {
+  text-decoration: none;
 }
