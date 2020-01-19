@@ -12,13 +12,13 @@
       fluid
       class="h-full"
     >
-      <v-row class="text-center secondary--text display-1">
+      <v-row class="text-center display-1">
         <v-col
           v-if="$route.path !== '/'"
           cols="12"
         >
           <g-link
-            class="text-accent secondary--text"
+            class="text-accent neutral--text"
             to="/"
           >
             Inicio
@@ -29,7 +29,7 @@
           cols="12"
         >
           <g-link
-            class="text-accent secondary--text"
+            class="text-accent neutral--text"
             to="/menu/"
           >
             Menu
@@ -37,7 +37,7 @@
         </v-col>
         <v-col cols="12">
           <a
-            class="text-accent secondary--text"
+            class="text-accent neutral--text"
             @click="navigateTo({ path: '/', ref: 'promotions' })"
           >
             Promos
@@ -45,7 +45,7 @@
         </v-col>
         <v-col cols="12">
           <a
-            class="text-accent secondary--text"
+            class="text-accent neutral--text"
             @click="navigateTo({ path: '/', ref: 'services' })"
           >
             Servicios
@@ -53,7 +53,7 @@
         </v-col>
         <v-col cols="12">
           <a
-            class="text-accent secondary--text"
+            class="text-accent neutral--text"
             @click="navigateTo({ path: '/', ref: 'aboutUs' })"
           >
             Historia
@@ -61,7 +61,7 @@
         </v-col>
         <v-col cols="12">
           <a
-            class="text-accent secondary--text"
+            class="text-accent neutral--text"
             @click="navigateTo({ path: '/', ref: 'findUs' })"
           >
             Ubicación
@@ -72,7 +72,7 @@
         <a href="">
           <font-awesome-icon
             :icon="['fab', 'facebook-square']"
-            class="fifth--text"
+            class="accent--text text--darken-3"
             size="2x"
           />
         </a>

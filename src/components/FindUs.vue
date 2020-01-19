@@ -1,19 +1,19 @@
 <template>
-  <v-container>
+  <v-container class="neutral--text">
     <v-row align="center">
       <v-col
         cols="12"
         md="6"
         class="text-center display-1"
       >
-        <p class="text-accent secondary--text">
+        <p class="text-accent">
           Encuéntranos
         </p>
         <v-row class="text-left">
           <v-col cols="1">
             <font-awesome-icon
               :icon="['fas', 'phone-alt']"
-              class="third--text business-info-icon"
+              class="primary--text business-info-icon"
               size="xs"
             />
           </v-col>
@@ -25,7 +25,7 @@
           <v-col cols="1">
             <font-awesome-icon
               :icon="['fas', 'map-marked-alt']"
-              class="third--text business-info-icon"
+              class="primary--text business-info-icon"
               size="xs"
             />
           </v-col>
@@ -37,7 +37,7 @@
           <v-col cols="1">
             <font-awesome-icon
               :icon="['fas', 'clock']"
-              class="third--text business-info-icon"
+              class="primary--text business-info-icon"
               size="xs"
             />
           </v-col>

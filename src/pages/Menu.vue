@@ -4,10 +4,10 @@
       <menu-hero />
     </section>
     <section class="third">
-      <v-container>
+      <v-container class="neutral--text">
         <v-row>
           <v-col cols="12">
-            <p class="text-center display-1 primary--text">
+            <p class="text-center display-1">
               Especialidades en tamaños chico, mediano, grande y familiar
             </p>
           </v-col>

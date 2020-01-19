@@ -25,10 +25,10 @@
         width="1300"
         height="1900"
       />
-      <v-scale-transition>
+      <v-scale-transition origin="center">
         <div
           v-show="showPricing"
-          class="w-full h-full absolute body rounded pricing-container secondary--text headline pa-3"
+          class="w-full h-full absolute accent rounded pricing-container secondary--text headline pa-3"
         >
           <ul class="pricing-list pa-0">
             <li class="d-flex">
@@ -53,10 +53,10 @@
     </v-col>
     <v-col
       cols="6"
-      class="body--text description-container pa-2"
+      class="description-container pa-2"
       order="1"
     >
-      <p class="headline font-weight-bold">
+      <p class="headline font-weight-bold accent--text">
         {{ title }}
       </p>
       <p class="title">

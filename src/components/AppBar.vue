@@ -11,7 +11,7 @@
       <font-awesome-icon
         :icon="['fas', 'bars']"
         size="2x"
-        class="secondary--text"
+        class="white--text"
       />
     </v-app-bar-nav-icon>
   </v-app-bar>

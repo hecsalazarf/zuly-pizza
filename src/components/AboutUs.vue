@@ -15,10 +15,10 @@
         md="6"
         class="text-center display-1"
       >
-        <p class="text-accent primary--text">
+        <p class="text-accent secondary--text text--darken-0">
           Nuestra historia
         </p>
-        <p class="body--text">
+        <p class="secondary--text">
           The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.
         </p>
       </v-col>

@@ -22,7 +22,7 @@
         class="animated infinite pulse slow"
       >
         <font-awesome-icon
-          class="secondary--text headline"
+          class="headline neutral--text"
           :icon="['fas', 'phone-volume']"
         />
       </v-btn>
@@ -69,6 +69,6 @@ export default {
 
 <style lang="scss" scoped>
   .layout-wrapper {
-    background-color: #f6eec9
+    background-color: var(--v-secondary-base);
   }
 </style>

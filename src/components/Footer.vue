@@ -3,6 +3,7 @@
     app
     absolute
     color="primary"
+    class="neutral--text"
   >
     <v-col
       class="text-center"

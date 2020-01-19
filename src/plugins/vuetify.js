@@ -34,12 +34,10 @@ export default function (Vue) {
       },
       themes: {
         light: {
-          primary: '#D08800', // gold
-          secondary: '#D22509', // red
-          third: '#30429A', // blue
-          fourth: '#124C21', // green
-          fifth: '#661706', // brown
-          body: 'F6EEC9',
+          primary: '#44A573', // sea green
+          secondary: '#3E3E3E', // black olive
+          accent: '#FF9A70', // blue
+          neutral: '#FFFFFF',
           error: '#FF5252',
           info: '#2196F3',
           success: '#4CAF50',

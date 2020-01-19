@@ -10,7 +10,7 @@
       <v-scale-transition origin="center">
         <div
           v-show="isPromosVisible"
-          class="fifth w-full h-full absolute"
+          class="accent w-full h-full absolute"
         />
       </v-scale-transition>
       <promotions ref="promotions" />
@@ -25,7 +25,7 @@
       <v-scale-transition origin="center">
         <div
           v-show="isAboutUSVisible"
-          class="third w-full h-full absolute"
+          class="accent w-full h-full absolute"
         />
       </v-scale-transition>
       <about-us ref="aboutUs" />
