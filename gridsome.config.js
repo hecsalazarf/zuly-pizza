@@ -21,8 +21,12 @@ module.exports = {
       plugins: [
         new VuetifyLoaderPlugin(),
         new GenerateSW({
-          // For an unknown reason, the precache manifest contains an aditional style.js file,
-          // which is not in the final bundle. We exclude this file directly
+          /*
+          Gridsome v0.7.0 creates a styles js chunk during the webpack compilation. Such file is removed
+          when css.split!==true but after the compilation finished.
+          As the workbox plugin considered that chunk as a precaching asset, the browser does not
+          find it and throws an error. To prevent this issue, we exclude the file.
+          */
           exclude: [/styles\..*\.js$/],
           skipWaiting: true,
           cleanupOutdatedCaches: true,
