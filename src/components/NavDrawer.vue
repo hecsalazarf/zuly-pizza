@@ -32,7 +32,7 @@
             class="text-accent neutral--text"
             to="/menu/"
           >
-            Menu
+            Menú
           </g-link>
         </v-col>
         <v-col cols="12">
@@ -68,8 +68,11 @@
           </a>
         </v-col>
       </v-row>
-      <div class="absolute social-networks">
-        <a href="">
+      <div class="d-flex w-full social-networks justify-end mt-8 pa-3">
+        <a
+          href=""
+          aria-label="Síguenos en Facebook"
+        >
           <font-awesome-icon
             :icon="['fab', 'facebook-square']"
             class="accent--text text--darken-3"

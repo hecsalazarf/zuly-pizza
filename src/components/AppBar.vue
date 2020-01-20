@@ -7,7 +7,10 @@
     hide-on-scroll
     width="60px"
   >
-    <v-app-bar-nav-icon @click="$emit('input', true)">
+    <v-app-bar-nav-icon
+      aria-label="Botón de menú"
+      @click="$emit('input', true)"
+    >
       <font-awesome-icon
         :icon="['fas', 'bars']"
         size="2x"

@@ -12,6 +12,7 @@
         elevation="5"
         fab
         small
+        aria-label="botón ver precios de pizza"
         @click="showPricing = !showPricing"
       >
         <font-awesome-icon
@@ -24,6 +25,7 @@
         src="~/assets/img/products/pizza-1.jpg"
         width="1300"
         height="1900"
+        alt="imagen de pizza"
       />
       <v-scale-transition origin="center">
         <div
