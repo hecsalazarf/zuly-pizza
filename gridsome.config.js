@@ -6,7 +6,6 @@
 
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 const merge = require('webpack-merge')
-const { GenerateSW } = require('workbox-webpack-plugin')
 
 module.exports = {
   siteName: 'Gridsome',
@@ -19,31 +18,7 @@ module.exports = {
   configureWebpack (config) {
     return merge({
       plugins: [
-        new VuetifyLoaderPlugin(),
-        new GenerateSW({
-          /*
-          Gridsome v0.7.0 creates a styles js chunk during the webpack compilation. Such file is removed
-          when css.split!==true but after the compilation finished.
-          As the workbox plugin considered that chunk as a precaching asset, the browser does not
-          find it and throws an error. To prevent this issue, we exclude the file.
-          */
-          exclude: [/styles\..*\.js$/],
-          skipWaiting: true,
-          cleanupOutdatedCaches: true,
-          cacheId: 'assets',
-          clientsClaim: true,
-          runtimeCaching: [{
-            urlPattern: /\.(?:png|jpg|jpeg|svg|mp4)$/,
-            handler: 'StaleWhileRevalidate',
-            options: {
-              // networkTimeoutSeconds: 5, // Only for NetworkFirst strategy
-              cacheName: 'media',
-              expiration: {
-                maxEntries: '30'
-              }
-            }
-          }]
-        })
+        new VuetifyLoaderPlugin()
       ]
     }, config)
   },
