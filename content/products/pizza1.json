@@ -1,0 +1,25 @@
+{
+  "id": "pizza1",
+  "name": "Pizza 1",
+  "description": "Una descripción",
+  "pricing": [
+    {
+      "size": "CH",
+      "amount": 254.23,
+      "currency": "MXN"
+    },
+    {
+      "size": "MD",
+      "amount": 129.23,
+      "currency": "MXN"
+    },
+    {
+      "size": "GR",
+      "amount": 399.23,
+      "currency": "MXN"
+    }
+  ],
+  "images": {
+    "main": "~/assets/images/pizzas/pizza-1.jpg"
+  }
+}

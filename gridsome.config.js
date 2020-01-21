@@ -14,7 +14,29 @@ module.exports = {
   metadata: {
     themeColor: '#00594f'
   },
-  plugins: [],
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/organization.json',
+        typeName: 'Organization'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/products/**/*.json',
+        typeName: 'Product'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/services/**/*.json',
+        typeName: 'Service'
+      }
+    }
+  ],
   configureWebpack (config) {
     return merge({
       plugins: [

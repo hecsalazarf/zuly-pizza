@@ -1,0 +1,30 @@
+{
+  "id": "tpizza",
+  "name": "TPizzas",
+  "addresses": [
+    {
+      "street": "Independen",
+      "number1": "2651",
+      "number2": "dede",
+      "zipCode": "55060",
+      "province": "Atlapexco",
+      "region": "Hidalgo",
+      "country": "Mexico",
+      "phones": {
+        "main": "5527666299"
+      }
+    }
+  ],
+  "schedule": {
+    "fromTime": "11:00 AM",
+    "toTime": "9:00 PM",
+    "fromDay": "Lunes",
+    "toDay": "Domingo"
+  },
+  "socialNetworks": {
+    "facebook": {
+      "name": "TPizzas",
+      "url": "https//www.facebook.com/tpizzas"
+    }
+  }
+}
