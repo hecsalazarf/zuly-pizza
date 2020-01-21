@@ -12,7 +12,10 @@ module.exports = {
   siteUrl: 'https://www.gridsome.org',
   siteDescription: 'Una descripción del sitio',
   metadata: {
-    themeColor: '#00594f'
+    themeColor: '#44A573',
+    locales: ['es_MX', 'es'],
+    ogType: 'website',
+    ogImage: '/imgages/icons/icon-325.png'
   },
   plugins: [
     {

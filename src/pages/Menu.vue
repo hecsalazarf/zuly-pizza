@@ -39,32 +39,21 @@
       siteName
       siteUrl
       siteDescription
+      themeColor
+      ogType
+      ogImage
+      locales
     }
   }
 </static-query>
 
 <script>
 import { MenuHero, Pizza } from '~/components'
+import { createPageMeta } from '~/meta'
 
 export default {
   metaInfo () {
-    const title = 'Menu'
-    const { siteDescription, siteName, siteUrl } = this.$static.metadata
-    return {
-      title,
-      meta: [
-        { name: 'description', content: siteDescription },
-        { property: 'og:description', content: siteDescription },
-        { property: 'og:title', content: `${title} - ${siteName}` },
-        { property: 'og:url', content: siteUrl }
-      ],
-      link: [
-        { rel: 'canonical', href: siteUrl },
-        { rel: 'alternate', hreflang: 'es-MX', href: siteUrl },
-        { rel: 'alternate', hreflang: 'es', href: siteUrl },
-        { rel: 'alternate', hreflang: 'x-default', href: siteUrl }
-      ]
-    }
+    return createPageMeta('menu', this.$static.metadata)
   },
   name: 'MenuPage',
   components: {

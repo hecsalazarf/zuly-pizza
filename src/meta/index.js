@@ -1,5 +1,7 @@
-import metaAttrs from './metaAttrs'
+import createPageMeta from './createMeta'
+import globalScripts from './scripts'
 
 export {
-  metaAttrs
+  createPageMeta,
+  globalScripts
 }
