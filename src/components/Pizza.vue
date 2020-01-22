@@ -28,9 +28,9 @@
       <v-scale-transition origin="center">
         <div
           v-show="showPricing"
-          class="w-full h-full absolute accent rounded pricing-container secondary--text headline pa-3"
+          class="w-full h-full absolute accent rounded pricing-container secondary--text headline pa-2"
         >
-          <ul class="pricing-list pa-0">
+          <ul class="pricing-list pa-1">
             <li
               v-for="(price, index) in value.pricing"
               :key="index"
@@ -104,5 +104,13 @@ export default {
 
 .pricing-list {
   list-style-type: none;
+  height: 90%;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .pricing-list {
+    height: 80%;
+  }
 }
 </style>
