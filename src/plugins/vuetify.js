@@ -1,5 +1,5 @@
 import Vuetify from 'vuetify/lib'
-import es from 'vuetify/es5/locale/es'
+import es from 'vuetify/lib/locale/es'
 
 export default function (Vue) {
   if (process.env.NODE_ENV === 'development') {

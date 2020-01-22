@@ -47,6 +47,7 @@ module.exports = {
       ]
     }, config)
   },
+  transpileDependencies: ['vuetify'], // Transpile Vuetify to support old browsers
   css: {
     loaderOptions: {
       sass: {
