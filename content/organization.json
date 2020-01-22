@@ -1,25 +1,26 @@
 {
-  "id": "tpizza",
-  "name": "TPizzas",
+  "id": "upizza",
+  "name": "Ulik Pizza",
   "addresses": [
     {
-      "street": "Independen",
-      "number1": "2651",
-      "number2": "dede",
-      "zipCode": "55060",
+      "street": "Calle Flor de Mayo, casi esquina con 5 de Mayo",
+      "number1": "",
+      "number2": "",
+      "zipCode": "",
       "province": "Atlapexco",
       "region": "Hidalgo",
-      "country": "Mexico",
+      "country": "México",
       "phones": {
-        "main": "5527666299"
+        "main": "77 1234 8276",
+        "alternative": "77 1115 6402"
       }
     }
   ],
   "schedule": {
-    "fromTime": "11:00 AM",
-    "toTime": "9:00 PM",
-    "fromDay": "Lunes",
-    "toDay": "Domingo"
+    "fromTime": "12:00 pm",
+    "toTime": "10:00 pm",
+    "fromDay": "Miércoles",
+    "toDay": "Lunes"
   },
   "socialNetworks": {
     "facebook": {

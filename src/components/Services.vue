@@ -9,53 +9,21 @@
       <v-col cols="12">
         <v-row>
           <v-col
+            v-for="item in $static.services.edges"
+            :key="item.node.id"
             cols="12"
             md="4"
           >
             <v-row>
               <v-col cols="12">
                 <font-awesome-icon
-                  :icon="['fas', 'pepper-hot']"
+                  :icon="item.node.icon.split(' ')"
                   size="2x"
-                  class="primary--text"
+                  :class="item.node.iconClass"
                 />
               </v-col>
               <v-col cols="12">
-                <p> Vendemos productos frescos con ingredientes de la regióm</p>
-              </v-col>
-            </v-row>
-          </v-col>
-          <v-col
-            cols="12"
-            md="4"
-          >
-            <v-row>
-              <v-col cols="12">
-                <font-awesome-icon
-                  :icon="['fas', 'pizza-slice']"
-                  size="2x"
-                  class="accent--text text--darken-1"
-                />
-              </v-col>
-              <v-col cols="12">
-                <p>No tienes porque comprar toda una pizza, también vendemos rebanadas individuales</p>
-              </v-col>
-            </v-row>
-          </v-col>
-          <v-col
-            cols="12 "
-            md="4"
-          >
-            <v-row>
-              <v-col cols="12">
-                <font-awesome-icon
-                  :icon="['fas', 'motorcycle']"
-                  size="2x"
-                  class="primary--text"
-                />
-              </v-col>
-              <v-col cols="12">
-                <p>Entregamos a domicilio a las comunidades cercanas</p>
+                <p> {{ item.node.description }}</p>
               </v-col>
             </v-row>
           </v-col>
@@ -64,6 +32,21 @@
     </v-row>
   </v-container>
 </template>
+
+<static-query>
+  query {
+    services: allService(sortBy: "name", order: ASC) {
+      edges {
+        node {
+          id
+          description
+          icon
+          iconClass
+        }
+      }
+    }
+  }
+</static-query>
 
 <script>
 export default {

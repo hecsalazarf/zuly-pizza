@@ -1,6 +1,6 @@
 {
-  "id": "service2",
-  "name": "Service 2",
-  "icon": "fas fa-heart",
-  "description": "Esta es la descripción del servicio 2"
+  "name": "Service 3",
+  "icon": "fas motorcycle",
+  "iconClass": "primary--text",
+  "description": "Entregamos a domicilio a las comunidades cercanas"
 }

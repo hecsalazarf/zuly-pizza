@@ -18,7 +18,8 @@
             />
           </v-col>
           <v-col>
-            Llámanos al <span class="font-weight-bold">55 2766 6299</span>
+            Llámanos o escríbenos al <span class="font-weight-bold">{{ phone.main }}</span>
+            y <span class="font-weight-bold">{{ phone.alternative }}</span>
           </v-col>
         </v-row>
         <v-row class="text-left">
@@ -30,7 +31,7 @@
             />
           </v-col>
           <v-col>
-            <span class="font-weight-bold">Calle Molier #23</span> Atlapexco, Hidalgo
+            <span class="font-weight-bold">{{ address.street }}</span> {{ address.province }}, {{ address.region }}
           </v-col>
         </v-row>
         <v-row class="text-left">
@@ -42,7 +43,7 @@
             />
           </v-col>
           <v-col>
-            Abierto de lunes a viernes <span class="font-weight-bold">8:00am - 9:00pm</span>
+            Abierto de {{ schedule.fromDay }} a {{ schedule.toDay }} <span class="font-weight-bold">{{ schedule.fromTime }} - {{ schedule.toTime }}</span>
           </v-col>
         </v-row>
       </v-col>
@@ -61,12 +62,59 @@
   </v-container>
 </template>
 
+<static-query>
+  query {
+    organization(id: "upizza") {
+      name
+      addresses {
+        street
+        province
+        region
+        phones {
+          main
+          alternative
+        }
+      }
+      schedule {
+        fromDay
+        toDay
+        fromTime
+        toTime
+      }
+    }
+  }
+</static-query>
+
 <script>
 export default {
   name: 'FindUs',
   computed: {
     mapFrameUrl () {
       return `${process.env.GRIDSOME_GMAPS_EMBED_URL}?q=${process.env.GRIDSOME_GMAPS_QUERY}&key=${process.env.GRIDSOME_GMAPS_API_KEY}`
+    },
+    phone () {
+      const { main, alternative } = this.$static.organization.addresses[0].phones
+      return {
+        main,
+        alternative
+      }
+    },
+    address () {
+      const { street, province, region } = this.$static.organization.addresses[0]
+      return {
+        street,
+        province,
+        region
+      }
+    },
+    schedule () {
+      const { fromDay, fromTime, toDay, toTime } = this.$static.organization.schedule
+      return {
+        fromDay,
+        fromTime,
+        toDay,
+        toTime
+      }
     }
   }
 }

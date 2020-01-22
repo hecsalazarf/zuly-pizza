@@ -1,6 +1,6 @@
 {
-  "id": "service3",
-  "name": "Service 3",
-  "icon": "fas fa-heart",
-  "description": "Esta es la descripción del servicio 3"
+  "name": "Service 2",
+  "icon": "fas pizza-slice",
+  "iconClass": "accent--text text--darken-1",
+  "description": "No tienes porque comprar toda una pizza, también vendemos rebanadas individuales"
 }
