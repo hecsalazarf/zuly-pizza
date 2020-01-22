@@ -1,0 +1,43 @@
+{
+  "name": "Fajitas de pollo",
+  "description": "Pollo en chipotle, pimiento, cebolla y queso",
+  "pricing": [
+    {
+      "type": "MI",
+      "name": "Mini",
+      "amount": 37.00,
+      "currency": "MXN"
+    },
+    {
+      "type": "CH",
+      "name": "Chica",
+      "amount": 50.00,
+      "currency": "MXN"
+    },
+    {
+      "type": "MD",
+      "name": "Mediana",
+      "amount": 95.00,
+      "currency": "MXN"
+    },
+    {
+      "type": "GR",
+      "name": "Grande",
+      "amount": 144.00,
+      "currency": "MXN"
+    },
+    {
+      "type": "JU",
+      "name": "Jumbo",
+      "amount": 160.00,
+      "currency": "MXN"
+    },
+    {
+      "type": "MI",
+      "name": "Extra",
+      "amount": 190.00,
+      "currency": "MXN"
+    }
+  ],
+  "image": "src/assets/img/products/fajitas_pollo.jpg"
+}

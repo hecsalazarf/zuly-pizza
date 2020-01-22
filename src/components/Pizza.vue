@@ -22,10 +22,8 @@
       </v-btn>
       <g-image
         class="w-full h-full rounded"
-        src="~/assets/img/products/pizza-1.jpg"
-        width="1300"
-        height="1900"
         alt="imagen de pizza"
+        :src="value.image"
       />
       <v-scale-transition origin="center">
         <div
@@ -33,21 +31,13 @@
           class="w-full h-full absolute accent rounded pricing-container secondary--text headline pa-3"
         >
           <ul class="pricing-list pa-0">
-            <li class="d-flex">
-              <strong class="d-flex flex-grow-1 pricing-item">CH</strong>
-              <em>$80.00</em>
-            </li>
-            <li class="d-flex">
-              <strong class="d-flex flex-grow-1 pricing-item">MD</strong>
-              <i>$110.00</i>
-            </li>
-            <li class="d-flex">
-              <strong class="d-flex flex-grow-1 pricing-item">GR</strong>
-              <i>$140.00</i>
-            </li>
-            <li class="d-flex">
-              <strong class="d-flex flex-grow-1 pricing-item">FM</strong>
-              <i>$180.00</i>
+            <li
+              v-for="(price, index) in value.pricing"
+              :key="index"
+              class="d-flex"
+            >
+              <strong class="d-flex flex-grow-1 pricing-item">{{ price.name }}</strong>
+              <em>${{ price.amount }}</em>
             </li>
           </ul>
         </div>
@@ -59,10 +49,10 @@
       order="1"
     >
       <p class="headline font-weight-bold accent--text">
-        {{ title }}
+        {{ value.name }}
       </p>
       <p class="title">
-        {{ description }}
+        {{ value.description }}
       </p>
     </v-col>
   </v-row>
@@ -72,17 +62,14 @@
 export default {
   name: 'PizzaItem',
   props: {
-    title: {
-      type: String,
-      default: ''
-    },
-    description: {
-      type: String,
-      default: ''
-    },
-    image: {
-      type: String,
-      default: ''
+    value: {
+      type: Object,
+      default: () => ({
+        title: '',
+        description: '',
+        image: '',
+        pricing: []
+      })
     },
     imageRight: Boolean
   },

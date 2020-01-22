@@ -14,17 +14,15 @@
         </v-row>
         <v-row>
           <v-col
-            v-for="(item, index) in count"
-            :key="index"
+            v-for="(item, index) in this.$page.pizzas.edges"
+            :key="item.node.id"
             cols="12"
             md="6"
             lg="4"
           >
             <pizza
-              title="Pepperoni"
-              description="La clásica de pepperoni con orilla de queso de la región."
+              :value="item.node"
               :image-right="$vuetify.breakpoint.mdAndUp && isPhotoRight(index)"
-              image="~/assets/img/products/pizza-1.jpg"
             />
           </v-col>
         </v-row>
@@ -47,6 +45,25 @@
   }
 </static-query>
 
+<page-query>
+  query {
+    pizzas: allProduct {
+      totalCount
+      edges {
+        node {
+          name
+          description
+          pricing {
+            name
+            amount
+          }
+          image(width: 500, height: 500)
+        }
+      }
+    }
+  }
+</page-query>
+
 <script>
 import { MenuHero, Pizza } from '~/components'
 import { createPageMeta } from '~/meta'
@@ -62,7 +79,6 @@ export default {
   },
   data () {
     return {
-      count: [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]
     }
   },
   computed: {
