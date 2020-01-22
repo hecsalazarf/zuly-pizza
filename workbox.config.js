@@ -5,7 +5,7 @@ module.exports = {
   skipWaiting: true,
   cleanupOutdatedCaches: true,
   globDirectory: 'dist',
-  globPatterns: ['assets/**/*.{js,css,ttf}', '**/*.html'],
+  globPatterns: ['assets/**/*.{js,css,ttf,json}', '**/*.html'],
   cacheId: 'assets',
   clientsClaim: true,
   runtimeCaching: [{
