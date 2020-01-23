@@ -57,6 +57,11 @@
             :src="mapFrameUrl"
           />
         </v-lazy>
+        <iframe
+          v-if="noLazyMap"
+          class="w-full h-auto border-none map-frame rounded"
+          :src="mapFrameUrl"
+        />
       </v-col>
     </v-row>
   </v-container>
@@ -86,8 +91,16 @@
 </static-query>
 
 <script>
+import { agentFeatures } from '~/utils'
+const { hasIntersectionObserver } = agentFeatures
+
 export default {
   name: 'FindUs',
+  data () {
+    return {
+      noLazyMap: false
+    }
+  },
   computed: {
     mapFrameUrl () {
       return `${process.env.GRIDSOME_GMAPS_EMBED_URL}?q=${process.env.GRIDSOME_GMAPS_QUERY}&key=${process.env.GRIDSOME_GMAPS_API_KEY}`
@@ -115,6 +128,11 @@ export default {
         toDay,
         toTime
       }
+    }
+  },
+  mounted () {
+    if (!hasIntersectionObserver()) {
+      this.noLazyMap = true
     }
   }
 }

@@ -4,7 +4,7 @@
       <main-hero />
     </section>
     <section
-      v-intersect.quiet.once="createIntersectHandler('isPromosVisible')"
+      v-intersect.quiet="createIntersectHandler('isPromosVisible')"
       class="relative primary"
     >
       <v-scale-transition origin="center">
@@ -19,7 +19,7 @@
       <services ref="services" />
     </section>
     <section
-      v-intersect.quiet.once="createIntersectHandler('isAboutUSVisible')"
+      v-intersect.quiet="createIntersectHandler('isAboutUSVisible')"
       class="relative primary"
     >
       <v-scale-transition origin="center">
@@ -54,6 +54,8 @@
 import { MainHero, Promotions, Services, AboutUs, FindUs } from '~/components'
 import { PageMixin } from '~/mixins'
 import { createPageMeta } from '~/meta'
+import { agentFeatures } from '~/utils'
+const { hasIntersectionObserver } = agentFeatures
 
 export default {
   metaInfo () {
@@ -72,6 +74,12 @@ export default {
     return {
       isPromosVisible: false,
       isAboutUSVisible: false
+    }
+  },
+  mounted () {
+    if (!hasIntersectionObserver()) {
+      this.isPromosVisible = true
+      this.isAboutUSVisible = true
     }
   },
   methods: {
