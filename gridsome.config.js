@@ -47,6 +47,24 @@ module.exports = {
       }
     }
   ],
+  chainWebpack (chain) {
+    // console.log(chain.module.rules.get('images'))
+    // Override default configuration to save images in the same directory
+    // that Gridsome uses
+    chain.module
+      .rule('images')
+      .use('url-loader')
+      .tap(options => ({
+        limit: 5000,
+        name (file) {
+          if (process.env.NODE_ENV === 'development') {
+            return '[path][name].[ext]'
+          }
+
+          return 'assets/static/[name].[hash].[ext]'
+        }
+      }))
+  },
   configureWebpack (config) {
     return merge({
       plugins: [

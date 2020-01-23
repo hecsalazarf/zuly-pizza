@@ -1,5 +1,5 @@
 <template>
-  <v-parallax src="/img/brenna.jpg">
+  <v-parallax :src="require('~/assets/img/brenna.jpg')">
     <v-container class="text-center fill-height display-2">
       <v-row>
         <v-col>

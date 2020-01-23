@@ -8,7 +8,7 @@
       class="absolute min-h-full min-w-full w-auto h-auto"
     >
       <source
-        src="/video/max_champs_silo.mp4"
+        :src="require('~/assets/video/max_champs_silo.mp4')"
         type="video/mp4"
       >
     </video> -->
