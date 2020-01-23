@@ -9,7 +9,7 @@
       <v-col cols="12">
         <v-row>
           <v-col
-            v-for="item in $static.services.edges"
+            v-for="item in value.edges"
             :key="item.node.id"
             cols="12"
             md="4"
@@ -33,23 +33,14 @@
   </v-container>
 </template>
 
-<static-query>
-  query {
-    services: allService(sortBy: "name", order: ASC) {
-      edges {
-        node {
-          id
-          description
-          icon
-          iconClass
-        }
-      }
-    }
-  }
-</static-query>
-
 <script>
 export default {
-  name: 'Services'
+  name: 'Services',
+  props: {
+    value: {
+      type: Object,
+      default: () => ({})
+    }
+  }
 }
 </script>

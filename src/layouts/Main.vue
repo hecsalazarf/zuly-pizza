@@ -35,6 +35,7 @@
           threshold: 0.2
         }
       }"
+      :value="$static.organization"
     />
   </div>
 </template>
@@ -42,6 +43,7 @@
 <static-query>
   query {
     organization(id: "upizza") {
+      name
       addresses {
         phones {
           main

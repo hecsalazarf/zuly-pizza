@@ -67,35 +67,18 @@
   </v-container>
 </template>
 
-<static-query>
-  query {
-    organization(id: "upizza") {
-      name
-      addresses {
-        street
-        province
-        region
-        phones {
-          main
-          alternative
-        }
-      }
-      schedule {
-        fromDay
-        toDay
-        fromTime
-        toTime
-      }
-    }
-  }
-</static-query>
-
 <script>
 import { agentFeatures } from '~/utils'
 const { hasIntersectionObserver } = agentFeatures
 
 export default {
   name: 'FindUs',
+  props: {
+    value: {
+      type: Object,
+      default: () => ({})
+    }
+  },
   data () {
     return {
       noLazyMap: false
@@ -106,14 +89,14 @@ export default {
       return `${process.env.GRIDSOME_GMAPS_EMBED_URL}?q=${process.env.GRIDSOME_GMAPS_QUERY}&key=${process.env.GRIDSOME_GMAPS_API_KEY}`
     },
     phone () {
-      const { main, alternative } = this.$static.organization.addresses[0].phones
+      const { main, alternative } = this.value.addresses[0].phones
       return {
         main,
         alternative
       }
     },
     address () {
-      const { street, province, region } = this.$static.organization.addresses[0]
+      const { street, province, region } = this.value.addresses[0]
       return {
         street,
         province,
@@ -121,7 +104,7 @@ export default {
       }
     },
     schedule () {
-      const { fromDay, fromTime, toDay, toTime } = this.$static.organization.schedule
+      const { fromDay, fromTime, toDay, toTime } = this.value.schedule
       return {
         fromDay,
         fromTime,

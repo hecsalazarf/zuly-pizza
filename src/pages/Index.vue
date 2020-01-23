@@ -13,10 +13,16 @@
           class="accent w-full h-full absolute"
         />
       </v-scale-transition>
-      <promotions ref="promotions" />
+      <promotions
+        ref="promotions"
+        :value="$page.promotions"
+      />
     </section>
     <section>
-      <services ref="services" />
+      <services
+        ref="services"
+        :value="$page.services"
+      />
     </section>
     <section
       v-intersect.quiet="createIntersectHandler('isAboutUSVisible')"
@@ -31,7 +37,10 @@
       <about-us ref="aboutUs" />
     </section>
     <section>
-      <find-us ref="findUs" />
+      <find-us
+        ref="findUs"
+        :value="$page.organization"
+      />
     </section>
   </div>
 </template>
@@ -49,6 +58,51 @@
     }
   }
 </static-query>
+
+<page-query>
+  query {
+    organization(id: "upizza") {
+      name
+      addresses {
+        street
+        province
+        region
+        phones {
+          main
+          alternative
+        }
+      }
+      schedule {
+        fromDay
+        toDay
+        fromTime
+        toTime
+      }
+    }
+
+    promotions: allPromotion(order: ASC, sortBy:"name") {
+      edges {
+        node {
+          id
+          start
+          labels
+          image
+        }
+      }
+    }
+
+    services: allService(sortBy: "name", order: ASC) {
+      edges {
+        node {
+          id
+          description
+          icon
+          iconClass
+        }
+      }
+    }
+  }
+</page-query>
 
 <script>
 import { MainHero, Promotions, Services, AboutUs, FindUs } from '~/components'

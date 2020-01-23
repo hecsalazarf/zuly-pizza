@@ -5,7 +5,7 @@
     cycle
   >
     <v-carousel-item
-      v-for="item in $static.promotions.edges"
+      v-for="item in value.edges"
       :key="item.node.id"
       transition="scale-transition"
       reverse-transition="scale-transition"
@@ -47,24 +47,15 @@
   </v-carousel>
 </template>
 
-<static-query>
-  query {
-    promotions: allPromotion(order: ASC, sortBy:"name") {
-      edges {
-        node {
-          id
-          start
-          labels
-          image
-        }
-      }
-    }
-  }
-</static-query>
-
 <script>
 export default {
   name: 'Promotions',
+  props: {
+    value: {
+      type: Object,
+      default: () => ({})
+    }
+  },
   data () {
     return {
     }
