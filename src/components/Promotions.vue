@@ -1,25 +1,45 @@
 <template>
   <v-carousel
-    height="400"
     hide-delimiter-background
     :show-arrows="false"
     cycle
   >
     <v-carousel-item
-      v-for="(slide, i) in slides"
-      :key="i"
+      v-for="item in $static.promotions.edges"
+      :key="item.node.id"
       transition="scale-transition"
       reverse-transition="scale-transition"
     >
-      <v-container class="fill-height">
+      <v-container class="h-full">
         <v-row
-          align="center"
           justify="center"
+          align="center"
+          class="promo-container h-full text-center"
         >
-          <v-col>
-            <div class="display-3">
-              {{ slide }} Promoción
-            </div>
+          <v-col
+            cols="12"
+            sm="6"
+          >
+            <g-image
+              :src="item.node.image"
+              class="w-full promo-img"
+            />
+          </v-col>
+          <v-col
+            cols="12"
+            sm="6"
+            class="headline"
+          >
+            <h2 class="text-accent font-weight-regular primary--text text--darken-1 mb-sm-12 pb-3">
+              {{ item.node.start }}
+            </h2>
+            <p
+              v-for="(label, index) in item.node.labels"
+              :key="index"
+              class="display-1"
+            >
+              {{ label }}
+            </p>
           </v-col>
         </v-row>
       </v-container>
@@ -27,17 +47,49 @@
   </v-carousel>
 </template>
 
+<static-query>
+  query {
+    promotions: allPromotion(order: ASC, sortBy:"name") {
+      edges {
+        node {
+          id
+          start
+          labels
+          image
+        }
+      }
+    }
+  }
+</static-query>
+
 <script>
 export default {
   name: 'Promotions',
   data () {
     return {
-      slides: [
-        'Primera',
-        'Segunda',
-        'Tercera'
-      ]
     }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  @media screen and (max-width: 599px) {
+    .promo-img {
+      width: 60%;
+    }
+
+    .promo-container {
+      height: auto;
+    }
+  }
+  @media screen and (min-width: 1265px) {
+    .promo-img {
+      width: 70%;
+    }
+  }
+  @media screen and (min-width: 1905px) {
+    .promo-img {
+      width: 50%;
+    }
+  }
+</style>

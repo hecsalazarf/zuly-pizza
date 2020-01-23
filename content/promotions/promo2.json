@@ -1,0 +1,8 @@
+{
+  "name": "promotion2",
+  "start": "Domingos",
+  "labels": [
+    "En la compra de una pizza extra o una pizza jumbo, un refresco de 2L gratis"
+  ],
+  "image": "src/assets/img/promotions/promo2.png"
+}

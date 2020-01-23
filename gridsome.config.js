@@ -38,6 +38,13 @@ module.exports = {
         path: 'content/services/**/*.json',
         typeName: 'Service'
       }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/promotions/**/*.json',
+        typeName: 'Promotion'
+      }
     }
   ],
   configureWebpack (config) {

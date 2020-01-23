@@ -1,0 +1,9 @@
+{
+  "name": "promotion1",
+  "start": "Lunes y jueves",
+  "labels": [
+    "2 pizzas medianas x $140",
+    "2 pizzas grandes x $180"
+  ],
+  "image": "src/assets/img/promotions/promo1.png"
+}

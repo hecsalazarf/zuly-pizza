@@ -18,7 +18,7 @@
         right
         color="primary"
         tag="a"
-        :href="`tel:${5527666299}`"
+        :href="`tel:${$static.organization.addresses[0].phones.main}`"
         aria-label="botón marcar teléfono"
         class="animated infinite pulse slow"
       >
@@ -38,6 +38,18 @@
     />
   </div>
 </template>
+
+<static-query>
+  query {
+    organization(id: "upizza") {
+      addresses {
+        phones {
+          main
+        }
+      }
+    }
+  }
+</static-query>
 
 <script>
 import { AppBar, NavDrawer, Footer } from '~/components'
