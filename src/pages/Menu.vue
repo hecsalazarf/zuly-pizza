@@ -61,6 +61,14 @@
         }
       }
     }
+
+    organization(id: "upizza") {
+      logos {
+        white {
+          image
+        }
+      }
+    }
   }
 </page-query>
 

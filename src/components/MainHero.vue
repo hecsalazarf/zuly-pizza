@@ -13,15 +13,27 @@
       >
     </video> -->
     <v-container
-      class="fill-height relative pa-0"
+      class="h-full relative pa-0"
     >
-      <v-row no-gutters>
-        <v-col cols="12 text-center">
-          <h1 class="primary--text">
-            LOGO
+      <v-row
+        no-gutters
+        align-content="center"
+        class="h-full"
+      >
+        <v-col cols="12 text-center pa-5">
+          <g-image
+            :src="value.logos.color.image"
+            class="logo"
+          />
+        </v-col>
+        <v-col
+          cols="12 text-center"
+          class="pa-5"
+        >
+          <h1 class="display-2 neutral--text">
+            Hacemos pizzas, las mejores de la huasteca hidalguense
           </h1>
         </v-col>
-        <v-spacer />
       </v-row>
       <div class="d-flex scroll-icon absolute justify-center w-full">
         <font-awesome-icon
@@ -33,6 +45,18 @@
     </v-container>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'MainHero',
+  props: {
+    value: {
+      type: Object,
+      default: () => {}
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
   .video-container {
@@ -50,5 +74,22 @@
 
   .scroll-icon {
     bottom: 10%;
+  }
+
+  .logo {
+    width: 30%;
+    opacity: 0.8;
+  }
+
+  @media screen and (max-width: 599px){
+    .logo {
+      width: 50%;
+    }
+  }
+
+  @media screen and (min-width: 1265px) {
+    .logo {
+      width: 20%;
+    }
   }
 </style>

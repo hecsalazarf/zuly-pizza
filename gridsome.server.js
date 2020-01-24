@@ -10,13 +10,18 @@ module.exports = function (api) {
   api.loadSource(({ getCollection }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
 
-    // Overwrite product and promotion images with an absolute path in order to use
-    // them with Graphql
+    // Overwrite product, promotion and organization images with an absolute
+    // path in order to use them with Graphql
     for (const product of getCollection('Product')._collection.data) {
       product.image = path.resolve(product.image)
     }
     for (const promotion of getCollection('Promotion')._collection.data) {
       promotion.image = path.resolve(promotion.image)
+    }
+    for (const org of getCollection('Organization')._collection.data) {
+      for (const logo in org.logos) {
+        org.logos[logo].image = path.resolve(org.logos[logo].image)
+      }
     }
   })
 

@@ -22,6 +22,14 @@
     "fromDay": "Miércoles",
     "toDay": "Lunes"
   },
+  "logos": {
+    "color": {
+      "image": "src/assets/img/color_icon.png"
+    },
+    "white": {
+      "image": "src/assets/img/white_icon.png"
+    }
+  },
   "socialNetworks": {
     "facebook": {
       "name": "TPizzas",

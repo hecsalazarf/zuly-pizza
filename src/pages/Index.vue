@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <section>
-      <main-hero />
+      <main-hero :value="$page.organization" />
     </section>
     <section
       v-intersect.quiet="createIntersectHandler('isPromosVisible')"
@@ -70,6 +70,11 @@
         phones {
           main
           alternative
+        }
+      }
+      logos {
+        color {
+          image
         }
       }
       schedule {

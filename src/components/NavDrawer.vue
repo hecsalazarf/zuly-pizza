@@ -14,6 +14,14 @@
     >
       <v-row class="text-center display-1">
         <v-col
+          cols="12"
+        >
+          <g-image
+            :src="logo"
+            class="logo"
+          />
+        </v-col>
+        <v-col
           v-if="$route.path !== '/'"
           cols="12"
         >
@@ -75,7 +83,7 @@
         >
           <font-awesome-icon
             :icon="['fab', 'facebook-square']"
-            class="accent--text text--darken-3"
+            class="accent--text text--lighten-2"
             size="2x"
           />
         </a>
@@ -91,6 +99,17 @@ export default {
     value: {
       type: Boolean
     }
+  },
+  data () {
+    return {
+      logo: ''
+    }
+  },
+  mounted () {
+    this.$fetch('/menu/')
+      .then(({ data }) => {
+        this.logo = data.organization.logos.white.image
+      })
   },
   methods: {
     navigateTo (route) {
@@ -113,5 +132,9 @@ export default {
 .social-networks {
   right: 10%;
   bottom: 5%;
+}
+
+.logo {
+  width: 40%;
 }
 </style>
