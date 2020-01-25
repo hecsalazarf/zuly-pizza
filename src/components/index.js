@@ -8,6 +8,7 @@ import FindUs from './FindUs'
 import Footer from './Footer'
 import MenuHero from './MenuHero'
 import Pizza from './Pizza'
+import UpdateBanner from './UpdateBanner'
 
 export {
   AppBar,
@@ -19,5 +20,6 @@ export {
   FindUs,
   Footer,
   MenuHero,
-  Pizza
+  Pizza,
+  UpdateBanner
 }

@@ -5,7 +5,6 @@ const bootstrap = function () {
     console.log('Bypassing service worker registration in development mode')
     return
   }
-
   register('/service-worker.js', {
     // The registrationOptions object will be passed as the second argument
     // to ServiceWorkerContainer.register()
@@ -31,8 +30,12 @@ const bootstrap = function () {
 
     updated (registration) {
       if (registration.waiting) {
-        console.log('waiting')
-        window.dispatchEvent(new CustomEvent('updateFound', { detail: registration.waiting }))
+        const waitingWorker = registration.waiting
+        waitingWorker.onstatechange = () => {
+          if (waitingWorker.state === 'activated') {
+            window.dispatchEvent(new CustomEvent('updateFound'))
+          }
+        }
       }
       console.log('New content is available; please refresh.')
     },
