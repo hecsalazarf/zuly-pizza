@@ -57,7 +57,7 @@
             name
             amount
           }
-          image(width: 380, height: 500)
+          image(width: 1520, height: 2000)
         }
       }
     }
