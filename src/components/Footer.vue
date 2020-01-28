@@ -3,15 +3,26 @@
     app
     absolute
     color="primary"
-    class="neutral--text"
+    class="neutral--text d-flex flex-column"
   >
-    <v-col
-      class="text-center"
-      cols="12"
+    <p
+      class="text-center mb-0"
     >
       ©
       {{ year }} — <strong>{{ value.name }}</strong>
-    </v-col>
+    </p>
+    <p
+      class="text-center mb-0 caption"
+    >
+      Hecho con &#10084; por
+      <a
+        href="https://github.com/hecsalazarf"
+        target="_blank"
+        rel="author noopener noreferrer"
+      >
+        <strong class="neutral--text">hecsalazarf</strong>
+      </a>
+    </p>
   </v-footer>
 </template>
 
