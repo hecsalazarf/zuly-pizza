@@ -1,6 +1,6 @@
 <template>
   <div class="video-container relative h-screen">
-    <!-- <video
+    <video
       loop
       autoplay
       muted
@@ -8,10 +8,10 @@
       class="absolute min-h-full min-w-full w-auto h-auto"
     >
       <source
-        :src="require('~/assets/video/max_champs_silo.mp4')"
+        :src="require('~/assets/video/coyo_1.mp4')"
         type="video/mp4"
       >
-    </video> -->
+    </video>
     <v-container
       class="h-full relative pa-0"
     >
@@ -73,7 +73,7 @@ export default {
   }
 
   .scroll-icon {
-    bottom: 10%;
+    bottom: 0;
   }
 
   .logo {
@@ -84,6 +84,9 @@ export default {
   @media screen and (max-width: 599px){
     .logo {
       width: 50%;
+    }
+    .scroll-icon {
+      bottom: 10%;
     }
   }
 
