@@ -76,8 +76,11 @@
           </a>
         </v-col>
       </v-row>
-      <div class="d-flex w-full social-networks justify-end mt-8 pa-3">
-        <a
+      <div class="d-flex w-full social-networks justify-end pa-3 text-center">
+        <p class="neutral--text body-2">
+          Este sitio utiliza tecnología web progresiva. Puedes acceder a él sin acceso a internet (offline).
+        </p>
+        <!-- <a
           href=""
           aria-label="Síguenos en Facebook"
         >
@@ -86,7 +89,7 @@
             class="accent--text text--lighten-2"
             size="2x"
           />
-        </a>
+        </a> -->
       </div>
     </v-container>
   </v-navigation-drawer>
