@@ -5,7 +5,7 @@
     "build": "gridsome build && npm run gen-sw",
     "dev": "gridsome develop",
     "explore": "gridsome explore",
-    "gen-sw": "npx workbox generateSW workbox.config.js"
+    "gen-sw": "npx workbox injectManifest workbox.config.js && npx workbox copyLibraries dist/assets/js"
   },
   "dependencies": {
     "animate.css": "^3.7.2",

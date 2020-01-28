@@ -1,11 +1,15 @@
 const path = require('path')
 
 module.exports = {
+  swSrc: path.join('static', 'service-worker.js'),
   swDest: path.join('dist', 'service-worker.js'),
+  globDirectory: 'dist',
+  globPatterns: ['assets/**/*.{js,css,ttf,json}', '**/*.html']
+  // used by wizard
+  /*
+  importWorkboxFrom: 'local',
   skipWaiting: true,
   cleanupOutdatedCaches: true,
-  globDirectory: 'dist',
-  globPatterns: ['assets/**/*.{js,css,ttf,json}', '**/*.html'],
   cacheId: 'assets',
   clientsClaim: true,
   runtimeCaching: [{
@@ -19,4 +23,5 @@ module.exports = {
       }
     }
   }]
+  */
 }
