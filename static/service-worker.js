@@ -9,3 +9,4 @@ workbox.precaching.precacheAndRoute([])
 
 workbox.precaching.cleanupOutdatedCaches()
 workbox.routing.registerRoute(/\.(?:png|jpg|jpeg|svg|mp4)$/, new workbox.strategies.StaleWhileRevalidate({ cacheName: 'media', plugins: [new workbox.expiration.Plugin({ maxEntries: 30, purgeOnQuotaError: false })] }), 'GET')
+workbox.googleAnalytics.initialize()
