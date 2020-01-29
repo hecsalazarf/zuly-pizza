@@ -8,7 +8,7 @@
       class="absolute min-h-full min-w-full w-auto h-auto"
     >
       <source
-        :src="require('~/assets/video/coyo_1.mp4')"
+        :src="require('~/assets/video/main_hero.mp4')"
         type="video/mp4"
       >
     </video>
