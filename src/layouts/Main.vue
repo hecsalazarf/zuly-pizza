@@ -21,6 +21,7 @@
         :href="`tel:${$static.organization.addresses[0].phones.main}`"
         aria-label="botón marcar teléfono"
         class="animated infinite pulse slow"
+        @click="sendEvent"
       >
         <font-awesome-icon
           class="headline neutral--text"
@@ -56,6 +57,7 @@
 <script>
 import { AppBar, NavDrawer, Footer } from '~/components'
 import { debounce } from '~/utils'
+import { Categories, Actions } from '~/constants/analytics'
 
 export default {
   name: 'MainLayout',
@@ -77,6 +79,11 @@ export default {
     }, 100),
     onFooterIntersect (entries) {
       this.isFooterVisible = entries[0].isIntersecting
+    },
+    sendEvent () {
+      this.$ga.event(Actions.CLICK_TO_CALL, {
+        event_category: Categories.ENGAGEMENT
+      })
     }
   }
 }
