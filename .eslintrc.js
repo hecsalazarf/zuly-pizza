@@ -7,6 +7,12 @@ module.exports = {
     'plugin:vue/recommended',
     '@vue/standard'
   ],
+  globals: {
+    'ga': true, // Google Analytics
+    'process': true,
+    'importScripts': 'readonly', // method of the WorkerGlobalScope
+    'workbox': 'readonly' // Workbox
+  },
   parserOptions: {
     parser: 'babel-eslint',
     ecmaVersion: 2018,
