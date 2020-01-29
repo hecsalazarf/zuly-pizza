@@ -42,7 +42,7 @@ export default function (page, globlalAttrs) {
   return createMeta({
     ...globlalAttrs,
     title: pagesMeta[page].title,
-    description: `${pagesMeta[page].description}. ${siteDescription}`,
+    description: `${pagesMeta[page].description}`,
     url: `${siteUrl}${pagesMeta[page].path}`
   })
 }

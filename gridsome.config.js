@@ -8,9 +8,9 @@ const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 const merge = require('webpack-merge')
 
 module.exports = {
-  siteName: 'Gridsome',
-  siteUrl: 'https://www.gridsome.org',
-  siteDescription: 'Una descripción del sitio',
+  siteName: 'Zuly Pizza',
+  siteUrl: 'https://zuly.pizza',
+  siteDescription: 'Hacemos pizzas, las mejores de la huasteca hidalguense. Envíos a domicilio. Te esperamos en Atlapexco, Hidalgo. Descrubre nuestras promociones. Pizzas elaboradas con ingredientes de calidad.',
   metadata: {
     themeColor: '#44A573',
     locales: ['es_MX', 'es'],

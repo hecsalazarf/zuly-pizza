@@ -62,7 +62,7 @@
       }
     }
 
-    organization(id: "upizza") {
+    organization(id: "zuly-pizza") {
       logos {
         white {
           image

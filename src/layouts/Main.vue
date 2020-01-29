@@ -43,7 +43,7 @@
 
 <static-query>
   query {
-    organization(id: "upizza") {
+    organization(id: "zuly-pizza") {
       name
       addresses {
         phones {

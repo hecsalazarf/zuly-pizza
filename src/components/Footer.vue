@@ -20,7 +20,7 @@
         target="_blank"
         rel="author noopener noreferrer"
       >
-        <strong class="neutral--text">hecsalazarf</strong>
+        <strong class="neutral--text">HYZ</strong>
       </a>
     </p>
   </v-footer>
