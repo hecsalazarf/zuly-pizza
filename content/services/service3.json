@@ -1,6 +1,7 @@
 {
-  "name": "Service 3",
+  "name": "Service B",
   "icon": "fas motorcycle",
   "iconClass": "primary--text",
-  "description": "Entregamos a domicilio a las comunidades cercanas"
+  "description": "Entrega a domicilio gratis en Huautla, Tlalchiyahualica, Palo Gordo y Tenexco",
+  "caption": "También muchos otros lugares más. Llama y pregunta si llegamos a tu comunidad"
 }

@@ -101,6 +101,7 @@
         node {
           id
           description
+          caption
           icon
           iconClass
         }

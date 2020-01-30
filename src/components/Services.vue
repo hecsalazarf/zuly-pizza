@@ -2,9 +2,9 @@
   <v-container class="fill-height neutral--text">
     <v-row class="text-center display-1">
       <v-col cols="12">
-        <p class="text-accent">
-          Tenemos los mejores servicios para ti
-        </p>
+        <h4 class="text-accent font-weight-regular">
+          Además te ofrecemos
+        </h4>
       </v-col>
       <v-col cols="12">
         <v-row>
@@ -24,6 +24,12 @@
               </v-col>
               <v-col cols="12">
                 <p> {{ item.node.description }}</p>
+                <p
+                  v-if="item.node.caption !== ''"
+                  class="title mb-0"
+                >
+                  {{ item.node.caption }}
+                </p>
               </v-col>
             </v-row>
           </v-col>

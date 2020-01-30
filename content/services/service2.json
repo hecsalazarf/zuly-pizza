@@ -1,6 +1,7 @@
 {
-  "name": "Service 2",
+  "name": "Service A",
   "icon": "fas pizza-slice",
   "iconClass": "accent--text text--darken-1",
-  "description": "No tienes porque comprar toda una pizza, también vendemos rebanadas individuales"
+  "description": "Venta de rebanadas individuales de peperoni y hawaiana",
+  "caption": ""
 }

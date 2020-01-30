@@ -1,6 +1,7 @@
 {
-  "name": "Service 1",
-  "icon": "fas pepper-hot",
-  "iconClass": "primary--text",
-  "description": "Vendemos productos frescos con ingredientes de la región"
+  "name": "Service C",
+  "icon": "fas graduation-cap",
+  "iconClass": "accent--text text--darken-1",
+  "description": "Promociones especiales para convivios escolares",
+  "caption": ""
 }
