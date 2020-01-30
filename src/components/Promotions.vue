@@ -19,6 +19,8 @@
           <v-col
             cols="12"
             sm="6"
+            md="7"
+            lg="8"
           >
             <g-image
               :src="item.node.image"
@@ -28,6 +30,8 @@
           <v-col
             cols="12"
             sm="6"
+            md="5"
+            lg="4"
             class="headline"
           >
             <h2 class="text-accent font-weight-regular primary--text text--darken-1 mb-sm-12 pb-3">
