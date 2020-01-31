@@ -30,6 +30,6 @@
     "sass": "^1.25.0",
     "sass-loader": "^7.3.1",
     "vuetify-loader": "^1.4.3",
-    "workbox-cli": "^4.3.1"
+    "workbox-cli": "^5.0.0"
   }
 }

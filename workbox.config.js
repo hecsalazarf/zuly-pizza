@@ -12,7 +12,6 @@ module.exports = {
   ]
   // used by wizard
   /*
-  importWorkboxFrom: 'local',
   skipWaiting: true,
   cleanupOutdatedCaches: true,
   cacheId: 'assets',
