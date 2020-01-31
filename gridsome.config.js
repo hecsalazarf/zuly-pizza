@@ -48,7 +48,22 @@ module.exports = {
     }
   ],
   chainWebpack (chain) {
-    // console.log(chain.module.rules.get('images'))
+    // console.log(chain.toString())
+
+    // Sass options were moved inside sassOptions in sass-loader v8.0.0
+    // Gridsome v0.7.0 does not support the new schema
+    // To overcome this issue, we delete the indentedSyntax prop, so that
+    // sass-loader does not display an error of unknown properties
+    // https://github.com/gridsome/gridsome/issues/750
+    chain.module
+      .rule('sass')
+      .oneOf('modules')
+      .use('sass-loader')
+      .tap(options => {
+        delete options.indentedSyntax
+        return options
+      })
+
     // Override default configuration to save images in the same directory
     // that Gridsome uses
     chain.module
@@ -76,7 +91,13 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        data: "@import 'src/scss/vuetify_vars.scss'" // Override vuetify sass variables
+        prependData: "@import 'src/scss/vuetify_vars.scss'", // Override vuetify sass variables
+        // Sass options were moved inside sassOptions in sass-loader v8.0.0
+        // Gridsome v0.7.0 does not support the new schema
+        // To overcome this issue, we set options in here
+        sassOptions: {
+          indentedSyntax: true
+        }
       }
     }
   },

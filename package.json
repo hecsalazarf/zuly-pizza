@@ -28,7 +28,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^6.1.2",
     "sass": "^1.25.0",
-    "sass-loader": "^7.3.1",
+    "sass-loader": "^8.0.2",
     "vuetify-loader": "^1.4.3",
     "workbox-cli": "^5.0.0"
   }
