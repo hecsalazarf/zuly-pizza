@@ -2,7 +2,7 @@
 export const home = {
   title: 'Inicio',
   path: '',
-  description: 'Hacemos pizzas, las mejores de la huasteca hidalguense. Envíos a domicilio. Te esperamos en Atlapexco, Hidalgo. Descrubre nuestras promociones. Llama y ordena tu pizza.'
+  description: 'Hacemos las mejores pizzas de la huasteca hidalguense. Entregas a domicilio. Te esperamos en Atlapexco, Hidalgo. Descrubre nuestras promociones. Llama y ordena tu pizza.'
 }
 
 export const menu = {
