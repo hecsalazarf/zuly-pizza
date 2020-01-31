@@ -30,6 +30,11 @@
       "image": "src/assets/img/white_icon.png"
     }
   },
+  "aboutUs": [
+    "Entre el verdor de los cerros, los coloridos sones del huapango y la banda de viento, integramos tradición a nuestras pizzas.",
+    "Desde 2016 ofrecemos un pequeño pedazo de la cocina italiana. Comenzamos vendiendo rebanadas en la localidad de Coyolapa. Saliendo a las calles, buscando clientes. No teníamos local, mucho menos servicio a domicilio, pero sí constancia y esmero.",
+    "Gracias a esa dedicación, ahora llevamos a las comunidades vecinas, el delicioso sabor de Zuly Pizza. ¡Te invitamos a disfrutarlo!"
+  ],
   "socialNetworks": {
     "facebook": {
       "name": "TPizzas",

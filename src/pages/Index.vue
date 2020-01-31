@@ -34,7 +34,10 @@
           class="accent w-full h-full absolute"
         />
       </v-scale-transition>
-      <about-us ref="aboutUs" />
+      <about-us
+        ref="aboutUs"
+        :value="$page.organization"
+      />
     </section>
     <section>
       <find-us
@@ -72,6 +75,7 @@
           alternative
         }
       }
+      aboutUs
       logos {
         color {
           image
@@ -150,7 +154,7 @@ export default {
       return {
         handler: handler.bind(this),
         options: {
-          threshold: 0.5
+          threshold: 0.3
         }
       }
     }
