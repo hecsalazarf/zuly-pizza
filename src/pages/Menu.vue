@@ -8,7 +8,7 @@
         <v-row>
           <v-col cols="12">
             <p class="text-center display-1">
-              Especialidades en tamaños chico, mediano, grande y familiar
+              Conoce nuestras pizzas, elige y ordena.
             </p>
           </v-col>
         </v-row>
