@@ -31,7 +31,7 @@
           class="pa-5"
         >
           <h1 class="display-2 neutral--text">
-            Hacemos pizzas, las mejores de la huasteca hidalguense
+            Hacemos las mejores pizzas de la huasteca hidalguense
           </h1>
         </v-col>
       </v-row>

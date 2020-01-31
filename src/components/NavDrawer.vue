@@ -78,7 +78,7 @@
       </v-row>
       <div class="d-flex w-full social-networks justify-end pa-3 text-center">
         <p class="neutral--text body-2">
-          Este sitio utiliza tecnología web progresiva. Puedes acceder a él sin acceso a internet (offline).
+          Este sitio utiliza tecnología web progresiva. Puedes ingresar a él sin acceso a internet (offline).
         </p>
         <!-- <a
           href=""
