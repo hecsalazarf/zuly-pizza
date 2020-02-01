@@ -24,10 +24,10 @@
   },
   "logos": {
     "color": {
-      "image": "src/assets/img/color_icon.png"
+      "image": "src/assets/img/color_logo.png"
     },
     "white": {
-      "image": "src/assets/img/white_icon.png"
+      "image": "src/assets/img/white_logo.png"
     }
   },
   "aboutUs": [

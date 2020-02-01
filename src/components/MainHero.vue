@@ -30,7 +30,7 @@
           cols="12 text-center"
           class="pa-5"
         >
-          <h1 class="display-2 neutral--text">
+          <h1 class="display-2 neutral--text header--text">
             Hacemos las mejores pizzas de la huasteca hidalguense
           </h1>
         </v-col>
@@ -76,23 +76,36 @@ export default {
     bottom: 0;
   }
 
-  .logo {
-    width: 30%;
-    opacity: 0.8;
-  }
-
   @media screen and (max-width: 599px){
     .logo {
-      width: 50%;
+      width: 70%;
     }
     .scroll-icon {
       bottom: 10%;
     }
+    .header--text {
+      font-size: 2.5rem !important;
+    }
   }
 
-  @media screen and (min-width: 1265px) {
+  @media screen and (min-width: 600px) and (max-width: 959px){
     .logo {
-      width: 20%;
+      width: 35%;
+    }
+    .header--text {
+      font-size: 2.5rem !important;
+    }
+  }
+
+  @media screen and (min-width: 960px) and (max-width: 1263px){
+    .logo {
+      width: 40%;
+    }
+  }
+
+  @media screen and (min-width: 1264px) {
+    .logo {
+      width: 30%;
     }
   }
 </style>
