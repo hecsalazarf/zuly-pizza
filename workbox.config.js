@@ -5,10 +5,11 @@ module.exports = {
   swDest: path.join('dist', 'service-worker.js'),
   globDirectory: 'dist',
   globPatterns: [
-    'assets/**/*.{js,css,ttf,json}',
-    '**/*.html',
-    'assets/media/main_hero.*.mp4',
-    'assets/static/{white,color}_icon.*.{png,jpeg,jpg}'
+    // json and html files should be precached together, otherwise hash
+    // validation error occurs.
+    'assets/**/*.{js,css,ttf}',
+    // '**/*.html',
+    'assets/media/main_hero.*.mp4'
   ]
   // used by wizard
   /*
