@@ -13,7 +13,7 @@
           class="secondary--text"
         />
       </p>
-      <p class="text-accent text-center third--text">
+      <p class="text-accent text-center third--text accent--text">
         Lo sentimos, la página que buscas no existe
       </p>
     </div>
@@ -23,6 +23,11 @@
 <script>
 export default {
   name: 'Page404',
+  metaInfo () {
+    return {
+      title: '404'
+    }
+  },
   data () {
     return {
       height: 0
