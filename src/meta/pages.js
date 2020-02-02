@@ -8,5 +8,5 @@ export const home = {
 export const menu = {
   title: 'Menú',
   path: '/menu/',
-  description: 'Elige el tamaño y la especialidad de tu pizza. Desde las clásicas hawaiana y peperoni, hasta las originales huasteca o especial. Todas preparadas con ingredientes de calidad '
+  description: 'Elige el tamaño y la especialidad de tu pizza. Desde las clásicas hawaiana y peperoni, hasta las originales huasteca o especial. Todas preparadas con ingredientes de calidad.'
 }

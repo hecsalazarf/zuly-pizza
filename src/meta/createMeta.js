@@ -10,9 +10,9 @@ function createMeta (data) {
       { property: 'og:description', content: data.description },
       { property: 'og:url', content: data.url },
       { property: 'og:type', content: data.ogType },
-      { nampropertye: 'og:image', content: `${data.siteUrl}${data.ogImage}` },
-      { name: 'og:locale', content: data.locales[0] },
-      { name: 'og:site_name', content: data.siteName }
+      { property: 'og:image', content: `${data.siteUrl}${require('~/assets/img/icon_325x325.png')}` },
+      { property: 'og:locale', content: data.locales[0] },
+      { property: 'og:site_name', content: data.siteName }
     ],
     link: [
       { rel: 'canonical', href: data.url },

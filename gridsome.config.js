@@ -13,9 +13,9 @@ module.exports = {
   siteDescription: 'Hacemos pizzas, las mejores de la huasteca hidalguense. Envíos a domicilio. Te esperamos en Atlapexco, Hidalgo. Descrubre nuestras promociones. Pizzas elaboradas con ingredientes de calidad.',
   metadata: {
     themeColor: '#44A573',
-    locales: ['es_MX', 'es'],
+    locales: ['es-mx', 'es'],
     ogType: 'website',
-    ogImage: '/imgages/icons/icon-325.png'
+    ogImage: 'src/assets/img/icon_325x325.png'
   },
   plugins: [
     {
