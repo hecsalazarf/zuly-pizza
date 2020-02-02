@@ -24,6 +24,7 @@
           <g-image
             :src="value.logos.color.image"
             class="logo"
+            alt="logo imagen"
           />
         </v-col>
         <v-col

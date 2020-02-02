@@ -25,6 +25,7 @@
             <g-image
               :src="item.node.image"
               class="w-full promo-img"
+              alt="imagen promocion"
             />
           </v-col>
           <v-col
