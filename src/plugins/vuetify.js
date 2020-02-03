@@ -36,7 +36,7 @@ export default function (Vue) {
         light: {
           primary: '#44A573', // sea green
           secondary: '#3E3E3E', // black olive
-          accent: '#FF9A70', // blue
+          accent: '#FF9A70', // pink-orange
           neutral: '#FFFFFF',
           error: '#FF5252',
           info: '#2196F3',
