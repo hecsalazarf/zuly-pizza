@@ -6,6 +6,7 @@
       muted
       playsinline
       class="absolute min-h-full min-w-full w-auto h-auto"
+      crossorigin="anonymous"
     >
       <source
         :src="require('~/assets/video/main_hero.mp4')"
