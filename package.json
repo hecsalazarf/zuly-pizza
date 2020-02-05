@@ -1,6 +1,7 @@
 {
-  "name": "gridvue",
+  "name": "zuly-pizza",
   "private": true,
+  "author": "hecsalazarf",
   "scripts": {
     "build": "gridsome build && npm run gen-sw",
     "dev": "gridsome develop",
