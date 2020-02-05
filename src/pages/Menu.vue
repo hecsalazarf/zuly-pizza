@@ -6,9 +6,15 @@
     <section class="third">
       <v-container class="neutral--text">
         <v-row>
-          <v-col cols="12">
-            <p class="text-center display-1">
+          <v-col
+            cols="12"
+            class="text-center"
+          >
+            <p class="display-1">
               Conoce nuestras pizzas, elige y ordena.
+            </p>
+            <p class="headline">
+              Recuerda que puedes pedirlas con orilla rellena de queso. <sup class="body-2">*</sup>
             </p>
           </v-col>
         </v-row>
@@ -26,6 +32,11 @@
             />
           </v-col>
         </v-row>
+        <div>
+          <p class="text-left mt-5">
+            * La orilla de queso tiene un costo adicional.
+          </p>
+        </div>
       </v-container>
     </section>
   </div>
