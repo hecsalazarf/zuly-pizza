@@ -2,8 +2,8 @@ importScripts('/assets/js/workbox-v5.0.0/workbox-sw.js')
 workbox.setConfig({ modulePathPrefix: '/assets/js/workbox-v5.0.0/' })
 
 workbox.core.setCacheNameDetails({ prefix: '', suffix: '', precache: 'precache' })
-workbox.core.skipWaiting()
 workbox.core.clientsClaim()
+self.addEventListener('message', onMessage)
 
 const precache = self.__WB_MANIFEST
 precacheMedia(precache)
@@ -35,4 +35,11 @@ function precacheMedia (precache) {
         })
     )
   })
+}
+
+function onMessage (event) {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    // instructs the latest service worker to activate as soon as it enters the waiting phase
+    self.skipWaiting()
+  }
 }

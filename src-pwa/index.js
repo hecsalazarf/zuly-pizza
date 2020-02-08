@@ -30,12 +30,11 @@ const bootstrap = function () {
 
     updated (registration) {
       if (registration.waiting) {
-        const waitingWorker = registration.waiting
-        waitingWorker.onstatechange = () => {
-          if (waitingWorker.state === 'activated') {
-            window.dispatchEvent(new CustomEvent('updateFound'))
+        window.dispatchEvent(new CustomEvent('updateFound', {
+          detail: {
+            registration: registration.waiting
           }
-        }
+        }))
       }
       console.log('New content is available; please refresh.')
     },
@@ -45,7 +44,6 @@ const bootstrap = function () {
     // },
 
     error (err) {
-      console.log('iihiih')
       console.error('Error during service worker registration:', err)
     }
   })

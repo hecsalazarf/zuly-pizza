@@ -2,10 +2,7 @@
   <v-app id="app">
     <main-layout>
       <router-view />
-      <update-banner
-        v-if="updateFound"
-        @input="updateFound = $event"
-      />
+      <update-banner ref="updateBanner" />
     </main-layout>
   </v-app>
 </template>
@@ -22,18 +19,27 @@ export default {
   },
   data () {
     return {
-      updateFound: false
     }
   },
   mounted () {
-    window.addEventListener('updateFound', this.displayUpdate)
+    window.addEventListener('updateFound', this.onUpdateFound)
   },
   beforeDestroy () {
-    window.removeEventListener('updateFound', this.displayUpdate)
+    window.removeEventListener('updateFound', this.onUpdateFound)
   },
   methods: {
-    displayUpdate () {
-      this.updateFound = true
+    onUpdateFound ({ detail }) {
+      const { registration } = detail
+      registration.onstatechange = () => {
+        if (registration.state === 'activated') {
+          // reload window when waiting worker gets activated
+          window.location.reload()
+        }
+      }
+      this.$refs.updateBanner.$once('update', () => {
+        registration.postMessage({ type: 'SKIP_WAITING' })
+      })
+      this.$refs.updateBanner.show()
     }
   }
 }

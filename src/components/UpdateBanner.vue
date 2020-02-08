@@ -1,6 +1,9 @@
 <template>
   <v-slide-y-reverse-transition origin="center">
-    <div class="update-banner primary">
+    <div
+      v-if="isShown"
+      class="update-banner primary"
+    >
       <v-container class="pa-0">
         <v-row
           no-gutters
@@ -24,7 +27,7 @@
               text
               color="neutral"
               class="subtitle-1"
-              @click="reload"
+              @click="$emit('update')"
             >
               Recargar
             </v-btn>
@@ -32,7 +35,7 @@
               text
               color="neutral"
               class="subtitle-1"
-              @click="$emit('input', false)"
+              @click="hide"
             >
               Cancelar
             </v-btn>
@@ -51,11 +54,17 @@ export default {
       type: Boolean
     }
   },
+  data () {
+    return {
+      isShown: false
+    }
+  },
   methods: {
-    reload () {
-      if (window) {
-        window.location.reload()
-      }
+    show () {
+      this.isShown = true
+    },
+    hide () {
+      this.isShown = false
     }
   }
 }
