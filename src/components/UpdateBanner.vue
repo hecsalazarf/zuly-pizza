@@ -27,7 +27,8 @@
               text
               color="neutral"
               class="subtitle-1"
-              @click="$emit('update')"
+              :loading="inProgress"
+              @click="update"
             >
               Recargar
             </v-btn>
@@ -35,6 +36,7 @@
               text
               color="neutral"
               class="subtitle-1"
+              :disabled="inProgress"
               @click="hide"
             >
               Cancelar
@@ -56,7 +58,8 @@ export default {
   },
   data () {
     return {
-      isShown: false
+      isShown: false,
+      inProgress: false
     }
   },
   methods: {
@@ -65,6 +68,10 @@ export default {
     },
     hide () {
       this.isShown = false
+    },
+    update () {
+      this.inProgress = true
+      this.$emit('update')
     }
   }
 }
