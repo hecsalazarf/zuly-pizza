@@ -79,7 +79,7 @@
       </v-row>
       <div class="d-flex w-full social-networks justify-end pa-3 text-center">
         <p class="neutral--text body-2">
-          Este sitio utiliza tecnología web progresiva. Carga a mayor velocidad, con un menor consumo de datos.
+          Este sitio utiliza tecnología web progresiva. Puedes ingresar a él sin acceso a Internet (offline).
         </p>
         <!-- <a
           href=""
