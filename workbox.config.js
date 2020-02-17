@@ -10,6 +10,10 @@ module.exports = {
     'assets/**/*.{js,css,ttf,json}',
     '**/*.html',
     'assets/media/main_hero.*.mp4'
+  ],
+  globIgnores: [
+    '**/404/**/*',
+    '**/*404*.{html,json,js}'
   ]
   // used by wizard
   /*
