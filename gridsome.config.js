@@ -5,7 +5,6 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
-const merge = require('webpack-merge')
 
 module.exports = {
   siteName: 'Zuly Pizza',
@@ -79,19 +78,15 @@ module.exports = {
           return 'assets/static/[name].[hash].[ext]'
         }
       }))
-  },
-  configureWebpack (config) {
-    return merge({
-      plugins: [
-        new VuetifyLoaderPlugin()
-      ]
-    }, config)
+
+    chain.plugin('vuetify-loader')
+      .use(VuetifyLoaderPlugin)
   },
   transpileDependencies: ['vuetify'], // Transpile Vuetify to support old browsers
   css: {
     loaderOptions: {
       sass: {
-        prependData: "@import 'src/scss/vuetify_vars.scss'", // Override vuetify sass variables
+        additionalData: "@import 'src/scss/vuetify_vars.scss'", // Override vuetify sass variables
         // Sass options were moved inside sassOptions in sass-loader v8.0.0
         // Gridsome v0.7.0 does not support the new schema
         // To overcome this issue, we set options in here
