@@ -1,5 +1,5 @@
-importScripts('/assets/js/workbox-v5.0.0/workbox-sw.js')
-workbox.setConfig({ modulePathPrefix: '/assets/js/workbox-v5.0.0/' })
+importScripts('/assets/js/workbox-v6.1.0/workbox-sw.js')
+workbox.setConfig({ modulePathPrefix: '/assets/js/workbox-v6.1.0/' })
 
 workbox.core.setCacheNameDetails({ prefix: '', suffix: '', precache: 'precache' })
 workbox.core.clientsClaim()
@@ -26,6 +26,7 @@ function precacheMedia (precache) {
       arr.splice(i, 1)
       return true
     }
+    return false
   })
   self.addEventListener('install', event => {
     event.waitUntil(
