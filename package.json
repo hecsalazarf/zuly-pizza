@@ -2,7 +2,7 @@
   "name": "zuly-pizza",
   "private": true,
   "author": "hecsalazarf",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "scripts": {
     "build": "gridsome build && npm run gen-sw",
     "dev": "gridsome develop",

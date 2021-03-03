@@ -12,15 +12,15 @@
       {{ year }} — <strong>{{ value.name }}</strong>
     </p>
     <p
-      class="text-center mb-0 caption"
+      class="text-center mb-0"
     >
-      Hecho con &#10084; por
+      Powered by
       <a
-        href="https://github.com/hecsalazarf"
+        href="https://www.typcod.com"
         target="_blank"
         rel="author noopener noreferrer"
       >
-        <strong class="neutral--text">HYZ</strong>
+        <strong class="neutral--text">Typcod</strong>
       </a>
     </p>
   </v-footer>
