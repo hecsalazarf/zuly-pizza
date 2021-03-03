@@ -12,7 +12,7 @@
       {{ year }} — <strong>{{ value.name }}</strong>
     </p>
     <p
-      class="text-center mb-0"
+      class="text-center mb-0 overline"
     >
       Powered by
       <a
