@@ -43,6 +43,7 @@
       <find-us
         ref="findUs"
         :value="$page.organization"
+        :map-uri="map"
       />
     </section>
   </div>
@@ -138,6 +139,19 @@ export default {
     return {
       isPromosVisible: false,
       isAboutUSVisible: false
+    }
+  },
+  computed: {
+    map () {
+      const url = process.env.GRIDSOME_GMAPS_EMBED_URL
+      const query = process.env.GRIDSOME_GMAPS_QUERY
+      const key = process.env.GRIDSOME_GMAPS_API_KEY
+
+      if (typeof url === 'undefined' || typeof query === 'undefined' || typeof key === 'undefined') {
+        // A default hard-coded map is displayed if any env variable is missing
+        return 'https://www.openstreetmap.org/export/embed.html?bbox=-98.34757731623579%2C21.01794577131594%2C-98.3447556323521%2C21.020264231947603&amp;layer=mapnik'
+      }
+      return `${url}?q=${query}&key=${key}`
     }
   },
   mounted () {

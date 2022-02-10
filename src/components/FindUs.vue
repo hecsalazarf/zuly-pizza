@@ -54,13 +54,13 @@
         <v-lazy>
           <iframe
             class="w-full h-auto border-none map-frame rounded"
-            :src="mapFrameUrl"
+            :src="mapUri"
           />
         </v-lazy>
         <iframe
           v-if="noLazyMap"
           class="w-full h-auto border-none map-frame rounded"
-          :src="mapFrameUrl"
+          :src="mapUri"
         />
       </v-col>
     </v-row>
@@ -77,6 +77,10 @@ export default {
     value: {
       type: Object,
       default: () => ({})
+    },
+    mapUri: {
+      type: String,
+      required: true
     }
   },
   data () {
@@ -85,9 +89,6 @@ export default {
     }
   },
   computed: {
-    mapFrameUrl () {
-      return `${process.env.GRIDSOME_GMAPS_EMBED_URL}?q=${process.env.GRIDSOME_GMAPS_QUERY}&key=${process.env.GRIDSOME_GMAPS_API_KEY}`
-    },
     phone () {
       const { main, alternative } = this.value.addresses[0].phones
       return {
