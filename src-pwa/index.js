@@ -5,7 +5,12 @@ const bootstrap = function () {
     console.log('Bypassing service worker registration in development mode')
     return
   }
-  register('/service-worker.js', {
+  const swPath = process.env.GRIDSOME_SW_PATH
+  if (typeof swPath === 'undefined') {
+    console.log('Bypassing service worker registration due to undefined path')
+    return
+  }
+  register(swPath, {
     // The registrationOptions object will be passed as the second argument
     // to ServiceWorkerContainer.register()
     // https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register#Parameter

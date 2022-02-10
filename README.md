@@ -12,6 +12,7 @@ GRIDSOME_GMAPS_API_KEY=<Google maps API key>
 GRIDSOME_GMAPS_EMBED_URL=<Google maps embed url>
 GRIDSOME_GA_TRACKING_ID=<Google analytics tracking id>
 GRIDSOME_GA_EMBED_URL=<Google analytics js url>
+GRIDSOME_SW_PATH=<Service worker path>
 ```
 
 ### NPM scripts
