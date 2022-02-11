@@ -10,6 +10,7 @@ module.exports = {
   siteName: 'Zuly Pizza',
   siteUrl: 'https://zuly.pizza',
   siteDescription: 'Hacemos pizzas, las mejores de la huasteca hidalguense. Envíos a domicilio. Te esperamos en Atlapexco, Hidalgo. Descrubre nuestras promociones. Pizzas elaboradas con ingredientes de calidad.',
+  pathPrefix: '/demos/zuly-pizza',
   metadata: {
     themeColor: '#44A573',
     locales: ['es-mx', 'es'],
